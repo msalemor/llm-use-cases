@@ -22,7 +22,7 @@ Examples:
 
 ```python
 text = load_text()
-prompt = "Summerize and highligh risks for the following contract:\n[context]\n{text}"
+prompt = "Summarize and list risks.\n[context]\n{text}"
 ```
 
 
@@ -30,9 +30,18 @@ Prompt:
 
 Summarize and list risks.
 
+Content:
+
+RESIDENTIAL LEASE AGREEMENT
+RENT. The Tenant shall pay to Landlord the sum of $1,500 per month (hereinafter referred to as "Rent") for the duration of the Term of the Lease. The Rent shall be payable on or before every day of the month (hereinafter referred to as the "Due Date"), notwithstanding that the said date falls on a weekend or holiday.
+A. Late Rent. If Rent is not paid within days of the Due Date, the Rent shall be considered past due, and a late fee of a $50 or 5% of the Rent past due shall be applied for every day Rent is late or O occurrence Rent is late.
+B. Returned Checks. In the event that a check intended as payment for Rent is dishonored for whatever reason, the same shall be considered as Late Rent with the late fee being payable on the same.
+
 Completion:
 
-Summary: The residential lease agreement states that the tenant must pay $1,500 per month on or before the due date, with a late fee of $50 or 5% of the rent past due if payment is not made within days of the due date. If a check intended as payment is dishonored, it will also be considered as late rent with the late fee being payable on the same.
+Summary: 
+
+The residential lease agreement states that the tenant must pay $1,500 per month on or before the due date, with a late fee of $50 or 5% of the rent past due if payment is not made within days of the due date. If a check intended as payment is dishonored, it will also be considered as late rent with the late fee being payable on the same.
 
 Risks:
 
