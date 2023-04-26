@@ -105,3 +105,13 @@ prompt = "Get a full sales description for a " + car_description
 ### Search Your Own Content
 
 #### Using Azure Search
+
+```mermaid
+flowchart LR
+  I((Internet))<-->S[Service]
+  S<--Query-->AS[Azure Search]
+  ST[Storage]--Index-->AS
+  S<--Prompt-->O[OpenAI]
+  D[Docs]--Store-->ST
+```
+  
