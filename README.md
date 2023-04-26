@@ -109,7 +109,7 @@ prompt = "Get a full sales description for a " + car_description
 ```mermaid
 flowchart LR
   I((Internet))<-->S[Service]
-  S<--Query-->AS[Azure Search]
+  S<--Query-->AS[Azure<br/>Search]
   ST[Storage]--Index-->AS
   S<--Prompt-->O[OpenAI]
   D[Docs]--Store-->ST
