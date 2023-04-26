@@ -64,11 +64,12 @@ Translate the following text from English to Spanish: Azure Container Apps is a 
 
 Completion:
 
-Translate the following text from English to Spanish: Azure Container Apps is a fully managed environment that enables you to run microservices and containerized applications on a serverless platform. Common uses of Azure Container Apps include:
-- Deploying API endpoints
-- Hosting background processing applications
-- Handling event-driven processing
-- Running microservices
+Azure Container Apps es un entorno completamente administrado que le permite ejecutar microservicios y aplicaciones en contenedores en una plataforma sin servidor. Los usos comunes de Azure Container Apps incluyen:
+
+- Desplegar puntos finales de API
+- Alojar aplicaciones de procesamiento en segundo plano
+- Manejar procesamiento impulsado por eventos
+- Ejecutar microservicios.
 
 
 ### Personalization & Content Generation
