@@ -44,7 +44,7 @@ prompt = "Translate the following text from English to Japanes:\n{text}"
 
 ## Personalization & Content Generation
 
-OpenAI can be used to develop personalized content, recommendations, and experiences for users based on their interests and behavior.
+OpenAI can be used to develop personalized content and experiences for users based on their interests and behavior.
 
 ```mermaid
 flowchart LR
@@ -60,3 +60,6 @@ item = {"make","Ford","model":"Explorer","year":2020,"Color":"red","condition":"
 item_description = get_item_description(item)
 prompt = "Get a full sales description for the following used vehicle:\n" + item_description
 ```
+
+## Search Your Own Content
+
