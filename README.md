@@ -10,7 +10,7 @@
 - Image generation
 - Image recognition
 
-### Summarization and Risk Analysis
+### Summarization, Risk Analysis, Action Items
 
 ```mermaid
 flowchart LR
