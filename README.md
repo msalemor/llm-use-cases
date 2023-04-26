@@ -93,8 +93,8 @@ flowchart LR
 Examples:
 
 ```python
-car = {"make","Ford","model":"Explorer","year":2020,"Color":"red","condition":"excellent"}
-car = get_car_description(item)
+car = {"make","Ford","model":"Explorer","year":2020,"Color":"red","condition":"good"}
+car = get_car_description(item) # good condition red 2020 Ford Explorer
 prompt = "Get a full sales description for a " + item_description
 ```
 
