@@ -38,10 +38,9 @@ OpenAI can be used to develop recommendation systems that can suggest products, 
 ```mermaid
 flowchart LR
   A((start))-->B{From curated<br/>content}  
-  B--No-->C[Do not<br/>add context]
-  B--Yes-->D[Add curated<br/>content as context]
-  C-->E[Prompt<br/>OpenAI API]
-  D-->E
+  B--No-->O(OpenAI)
+  B--Yes-->D[Add curated<br/>content as context]  
+  D-->O
 ```
 
 Examples:
