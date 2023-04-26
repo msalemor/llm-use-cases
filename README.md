@@ -22,7 +22,7 @@ prompt = "List the best restaurants in downtown London."
 
 - With context
 ```python
-prompt = "List the best restaurants in downtown London.\n[context]\n{list of restaurants from source}"
+prompt = "List the best restaurants in downtown London. The answer should come from the following list.\n[context]\n{list of restaurants from source}"
 ```
 
 ## Language Translation
