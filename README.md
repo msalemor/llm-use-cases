@@ -54,6 +54,22 @@ text = load_text()
 prompt = "Translate the following text from {source_lang} to {target_lang}:\n{text}"
 ```
 
+Prompt:
+
+Translate the following text from English to Spanish: Azure Container Apps is a fully managed environment that enables you to run microservices and containerized applications on a serverless platform. Common uses of Azure Container Apps include:
+- Deploying API endpoints
+- Hosting background processing applications
+- Handling event-driven processing
+- Running microservices
+
+Completion:
+
+Translate the following text from English to Spanish: Azure Container Apps is a fully managed environment that enables you to run microservices and containerized applications on a serverless platform. Common uses of Azure Container Apps include:
+- Deploying API endpoints
+- Hosting background processing applications
+- Handling event-driven processing
+- Running microservices
+
 
 ### Personalization & Content Generation
 
@@ -74,13 +90,15 @@ item_description = get_item_description(item)
 prompt = "Get a full sales description for the following used vehicle:\n" + item_description
 ```
 
-```
+
 Prompt:
+
 Get a full sales description for a used very good condition red 2020 Ford Explorer
 
 Completion:
+
 This used 2020 Ford Explorer is in very good condition and is a great choice for anyone looking for a reliable and stylish SUV. It has a bold red exterior and a comfortable interior with plenty of room for passengers and cargo. The exterior features a sleek design with a bold grille, LED headlights, and fog lights. The interior is equipped with leather seating, power windows and locks, a power liftgate, and a rearview camera. The 3.5L V6 engine provides plenty of power and the 6-speed automatic transmission ensures smooth shifting. The Ford Explorer also comes with a variety of safety features such as blind spot monitoring, lane keeping assist, and adaptive cruise control. This vehicle is perfect for anyone looking for a reliable and stylish SUV.
-```
+
 
 ### Search Your Own Content
 
