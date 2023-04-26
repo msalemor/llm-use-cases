@@ -49,7 +49,7 @@ Examples:
 
 ```python
 source_lang = "English" 
-target_lang = "Japanes"
+target_lang = "Japanese"
 text = load_text()
 prompt = "Translate the following text from {source_lang} to {target_lang}:\n{text}"
 ```
