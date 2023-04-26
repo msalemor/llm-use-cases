@@ -76,22 +76,7 @@ text = load_text()
 prompt = "Translate the following text from {source_lang} to {target_lang}:\n{text}"
 ```
 
-Prompt:
-
-Translate the following text from English to Spanish: Azure Container Apps is a fully managed environment that enables you to run microservices and containerized applications on a serverless platform. Common uses of Azure Container Apps include:
-- Deploying API endpoints
-- Hosting background processing applications
-- Handling event-driven processing
-- Running microservices
-
-Completion:
-
-Azure Container Apps es un entorno completamente administrado que le permite ejecutar microservicios y aplicaciones en contenedores en una plataforma sin servidor. Los usos comunes de Azure Container Apps incluyen:
-
-- Desplegar puntos finales de API
-- Alojar aplicaciones de procesamiento en segundo plano
-- Manejar procesamiento impulsado por eventos
-- Ejecutar microservicios.
+>Prompt:<br/>Translate the following text from English to Spanish: Azure Container Apps is a fully managed environment that enables you to run microservices and containerized applications on a serverless platform. Common uses of Azure Container Apps include:<br/>- Deploying API endpoints<br/>- Hosting background processing applications<br/>- Handling event-driven processing<br/>- Running microservices<br/><br/>Completion:<br/>Azure Container Apps es un entorno completamente administrado que le permite ejecutar microservicios y aplicaciones en contenedores en una plataforma sin servidor. Los usos comunes de Azure Container Apps incluyen:<br/>- Desplegar puntos finales de API<br/>- Alojar aplicaciones de procesamiento en segundo plano<br/>- Manejar procesamiento impulsado por eventos<br/>- Ejecutar microservicios.
 
 
 ### Personalization & Content Generation
