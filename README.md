@@ -31,8 +31,8 @@ prompt = "List the best restaurants in downtown London."
 
 - With context
 ```python
-resturants = get_restaurants("London").join("\n")
-prompt = "List the best restaurants in downtown London. The answer should come from the following list:\n{list of restaurants from source}"
+list = get_restaurants("London").join("\n")
+prompt = "List the best restaurants in downtown London. The answer should come from the following list:\n{list}"
 ```
 
 ### Language Translation
@@ -48,6 +48,7 @@ flowchart LR
 Examples:
 
 ```python
+text = load_text()
 prompt = "Translate the following text from English to Japanes:\n{text}"
 ```
 
