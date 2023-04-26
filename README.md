@@ -1,6 +1,6 @@
 # OpenAI - Common Use Cases
 
-## Recommendation Systems
+## Recommendation System
 
 OpenAI can be used to develop recommendation systems that can suggest products, services, or content to users based on their preferences and behavior.
 
@@ -42,7 +42,7 @@ prompt = "Translate the following text from English to Japanes:\n{text}"
 ```
 
 
-## Personalization & Content generation
+## Personalization & Content Generation
 
 OpenAI can be used to develop personalized content, recommendations, and experiences for users based on their interests and behavior.
 
