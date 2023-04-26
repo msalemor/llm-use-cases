@@ -48,8 +48,8 @@ flowchart LR
 Examples:
 
 ```python
-source_lang = "English" 
-target_lang = "Japanese"
+source_lang = language("en") # English
+target_lang = language("jp") # Japanese
 text = load_text()
 prompt = "Translate the following text from {source_lang} to {target_lang}:\n{text}"
 ```
