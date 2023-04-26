@@ -1,6 +1,15 @@
 # OpenAI - Common Use Cases
 
-## Recommendation System
+## Common Use Cases
+
+- Recommendation system
+- Language transation
+- Personalization and content generation
+- Prompting and complition from your own content
+- Image generation
+- Image recognition
+
+### Recommendation System
 
 OpenAI can be used to develop recommendation systems that can suggest products, services, or content to users based on their preferences and behavior.
 
@@ -25,7 +34,7 @@ prompt = "List the best restaurants in downtown London."
 prompt = "List the best restaurants in downtown London. The answer should come from the following list.\n[context]\n{list of restaurants from source}"
 ```
 
-## Language Translation
+### Language Translation
 
 OpenAI can be used to develop language translation models that can translate text from one language to another.
 
@@ -42,7 +51,7 @@ prompt = "Translate the following text from English to Japanes:\n{text}"
 ```
 
 
-## Personalization & Content Generation
+### Personalization & Content Generation
 
 OpenAI can be used to develop personalized content and experiences for users based on their interests and behavior.
 
@@ -61,5 +70,5 @@ item_description = get_item_description(item)
 prompt = "Get a full sales description for the following used vehicle:\n" + item_description
 ```
 
-## Search Your Own Content
+### Search Your Own Content
 
