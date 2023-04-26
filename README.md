@@ -26,19 +26,6 @@ prompt = "Summerize and highligh risks for the following contract:\n[context]\n{
 ```
 
 
-### Recommendation System
-
-OpenAI can be used to develop recommendation systems that can suggest products, services, or content to users based on their preferences and behavior.
-
-```mermaid
-flowchart LR
-  A((start))-->B{From curated<br/>content}  
-  B--No-->C[Do not<br/>add context]
-  B--Yes-->D[Add curated<br/>content as context]
-  C-->E[Prompt<br/>OpenAI API]
-  D-->E
-```
-
 Prompt:
 
 Summarize and list risks.
@@ -52,6 +39,20 @@ Risks:
 - Risk of incurring late fees if rent is not paid on time.
 - Risk of incurring additional fees if a check intended as payment is dishonored.
 - Risk of potential legal action if rent is consistently paid late or not at all.
+
+
+### Recommendation System
+
+OpenAI can be used to develop recommendation systems that can suggest products, services, or content to users based on their preferences and behavior.
+
+```mermaid
+flowchart LR
+  A((start))-->B{From curated<br/>content}  
+  B--No-->C[Do not<br/>add context]
+  B--Yes-->D[Add curated<br/>content as context]
+  C-->E[Prompt<br/>OpenAI API]
+  D-->E
+```
 
 Examples:
 
