@@ -2,12 +2,29 @@
 
 ## Common Use Cases
 
+- Summarization & Risk Analysis
 - Recommendation system
 - Language transation
 - Personalization and content generation
 - Prompting and complition from your own content
 - Image generation
 - Image recognition
+
+### Summarization and Risk Analysis
+
+```mermaid
+flowchart LR
+  A((start))-->B[Add text to<br/>be analyzed as context]
+  B-->O[Prompt<br/>OpenAI API]
+```
+
+Examples:
+
+```python
+text = load_text()
+prompt = "Summerize and highligh risks for the following contract:\n[context]\n{text}"
+```
+
 
 ### Recommendation System
 
@@ -21,6 +38,20 @@ flowchart LR
   C-->E[Prompt<br/>OpenAI API]
   D-->E
 ```
+
+Prompt:
+
+Summarize and list risks.
+
+Completion:
+
+Summary: The residential lease agreement states that the tenant must pay $1,500 per month on or before the due date, with a late fee of $50 or 5% of the rent past due if payment is not made within days of the due date. If a check intended as payment is dishonored, it will also be considered as late rent with the late fee being payable on the same.
+
+Risks:
+
+- Risk of incurring late fees if rent is not paid on time.
+- Risk of incurring additional fees if a check intended as payment is dishonored.
+- Risk of potential legal action if rent is consistently paid late or not at all.
 
 Examples:
 
