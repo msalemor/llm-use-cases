@@ -7,8 +7,6 @@
 - Language transation
 - Personalization and content generation
 - Prompting and complition from your own content
-- Image generation
-- Image recognition
 
 ### Summarization, Risk Analysis, Action Items
 
