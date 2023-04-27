@@ -12,8 +12,10 @@
 
 ```mermaid
 flowchart LR
-  A((start))-->B[Add text to<br/>be analyzed as context]
-  B-->O[Prompt<br/>OpenAI API]
+  A((start))-->B([Add text to<br/>be analyzed as context])
+  B-->O([Prompt<br/>OpenAI API])
+  classDef blue fill:blue,color:#fefefe
+  class A,B,O blue
 ```
 
 Jupyter notebook:
