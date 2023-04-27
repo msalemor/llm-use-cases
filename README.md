@@ -12,7 +12,7 @@
 
 ```mermaid
 flowchart LR
-  A((start))-->B([Add text to<br/>be analyzed as context])
+  A((Start))-->B([Add text to<br/>be analyzed as context])
   B-->O([Prompt<br/>OpenAI API])
   classDef blue fill:blue,color:#fefefe
   class A,B,O blue
@@ -44,10 +44,12 @@ OpenAI can be used to develop recommendation systems that can suggest products, 
 
 ```mermaid
 flowchart LR
-  A((start))-->B{From curated<br/>content}
-  B--No-->O(OpenAI)
-  B--Yes-->D[Add curated<br/>content as context]
+  A((Start))-->B{From curated<br/>content}
+  B--No-->O([OpenAI])
+  B--Yes-->D([Add curated<br/>content as context])
   D-->O
+  classDef blue fill:blue,color:#fefefe
+  class A,B,O,D blue
 ```
 
 Jupyter notebook:
@@ -78,8 +80,10 @@ OpenAI can be used to develop language translation models that can translate tex
 
 ```mermaid
 flowchart LR
-  A((start))-->B[Add text<br/>to be translated]
-  B-->O[Prompt<br/>OpenAI API]
+  A((start))-->B([Add text<br/>to be translated])
+  B-->O([Prompt<br/>OpenAI API])
+  classDef blue fill:blue,color:#fefefe
+  class A,B,O blue
 ```
 
 Jupyter notebook:
@@ -104,9 +108,11 @@ OpenAI can be used to develop personalized content and experiences for users bas
 
 ```mermaid
 flowchart LR
-  A((start))-->B[Get structured<br/>properties]
-  B-->D[Build a simple description<br/>from the properties]
-  D-->O[Prompt<br/>OpenAI API]
+  A((Start))-->B([Get structured<br/>properties])
+  B-->D([Build a simple description<br/>from the properties])
+  D-->O([Prompt<br/>OpenAI API])
+  classDef blue fill:blue,color:#fefefe
+  class A,B,D,O blue
 ```
 
 Examples:
