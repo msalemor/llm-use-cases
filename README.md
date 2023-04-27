@@ -17,6 +17,8 @@ flowchart LR
   A((start))-->B[Add text to<br/>be analyzed as context]
   B-->O[Prompt<br/>OpenAI API]
 ```
+Jupyter notebook:
+- [Analysis](https://github.com/msalemor/openai-use-cases/blob/main/notebooks/analysis.ipynb)
 
 Examples:
 
@@ -44,6 +46,8 @@ flowchart LR
   B--Yes-->D[Add curated<br/>content as context]  
   D-->O
 ```
+Jupyter notebook:
+- [Recommendation](https://github.com/msalemor/openai-use-cases/blob/main/notebooks/recommendation.ipynb)
 
 Examples:
 
@@ -67,6 +71,10 @@ flowchart LR
   A((start))-->B[Add text<br/>to be translated]
   B-->O[Prompt<br/>OpenAI API]
 ```
+
+Jupyter notebook:
+- [Translation](https://github.com/msalemor/openai-use-cases/blob/main/notebooks/translation.ipynb)
+
 
 Examples:
 
@@ -99,6 +107,8 @@ car_description = get_car_description(item) # good condition red 2020 Ford Explo
 prompt = "Get a full sales description for a " + car_description
 ```
 
+Jupyter notebook:
+- [Personalization](https://github.com/msalemor/openai-use-cases/blob/main/notebooks/personalization.ipynb)
 
 >Prompt:<br/>Get a full sales description for a used very good condition red 2020 Ford Explorer<br/><br/>Completion:<br/>This used 2020 Ford Explorer is in very good condition and is a great choice for anyone looking for a reliable and stylish SUV. It has a bold red exterior and a comfortable interior with plenty of room for passengers and cargo. The exterior features a sleek design with a bold grille, LED headlights, and fog lights. The interior is equipped with leather seating, power windows and locks, a power liftgate, and a rearview camera. The 3.5L V6 engine provides plenty of power and the 6-speed automatic transmission ensures smooth shifting. The Ford Explorer also comes with a variety of safety features such as blind spot monitoring, lane keeping assist, and adaptive cruise control. This vehicle is perfect for anyone looking for a reliable and stylish SUV.
 
