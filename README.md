@@ -100,9 +100,10 @@ flowchart LR
 Examples:
 
 ```python
-car = {"make","Ford","model":"Explorer","year":2020,"Color":"red","condition":"good"}
-car_description = get_car_description(item) # good condition red 2020 Ford Explorer
-prompt = "Get a full sales description for a " + car_description
+car = mock_get_car()
+car_description = get_car_description(car)
+
+prompt = f'Create a one paragraph sales description that includes the price for a {car_description}'
 ```
 
 Jupyter notebook:
