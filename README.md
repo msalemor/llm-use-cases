@@ -51,13 +51,16 @@ Examples:
 
 - Without context
 ```python
-prompt = "List the best restaurants in downtown London."
+prompt = "List the best restaurants in Miami, FL."
 ```
 
 - With context
 ```python
-list = get_restaurants("London").join("\n")
-prompt = "List the best restaurants in downtown London. The answer should come from the following list:\n{list}"
+target_text=""
+for restaurant in mock_get_restaurant_list("MIA"):
+    target_text += f"{restaurant}\n"
+
+prompt = f'List two top restaurants in Miami, FL\n{target_text}'
 ```
 
 ### Language Translation
