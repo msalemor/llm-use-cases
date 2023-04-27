@@ -23,8 +23,8 @@ Jupyter notebook:
 Examples:
 
 ```python
-text = load_text()
-prompt = "Summarize and list risks.\n[context]\n{text}"
+contract = mock_get_contract("LEASE_AGREEMENT")
+prompt = f'Summarize and list risks.\n[context]\n{contract}'
 ```
 
 - Sample 1:
