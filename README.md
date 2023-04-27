@@ -80,7 +80,7 @@ OpenAI can be used to develop language translation models that can translate tex
 
 ```mermaid
 flowchart LR
-  A((start))-->B([Add text<br/>to be translated])
+  A((Start))-->B([Add text<br/>to be translated])
   B-->O([Prompt<br/>OpenAI API])
   classDef blue fill:blue,color:#fefefe
   class A,B,O blue
