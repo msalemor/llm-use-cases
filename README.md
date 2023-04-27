@@ -5,7 +5,7 @@
 - Summarization & risk Analysis
 - Recommendation system
 - Language transation
-- Personalization and content generation
+- Content generation and Personalization
 - Prompting and complition from your own content
 
 ### Summarization, Risk Analysis, Action Items
@@ -90,7 +90,7 @@ prompt = f'Translate the text from {source_language} to {target_language}.\n[con
 >Prompt:<br/>Translate the following text from English to Spanish: Azure Container Apps is a fully managed environment that enables you to run microservices and containerized applications on a serverless platform. Common uses of Azure Container Apps include:<br/>- Deploying API endpoints<br/>- Hosting background processing applications<br/>- Handling event-driven processing<br/>- Running microservices<br/><br/>Completion:<br/>Azure Container Apps es un entorno completamente administrado que le permite ejecutar microservicios y aplicaciones en contenedores en una plataforma sin servidor. Los usos comunes de Azure Container Apps incluyen:<br/>- Desplegar puntos finales de API<br/>- Alojar aplicaciones de procesamiento en segundo plano<br/>- Manejar procesamiento impulsado por eventos<br/>- Ejecutar microservicios.
 
 
-### Personalization & Content Generation
+### Content Generation & Personalization
 
 OpenAI can be used to develop personalized content and experiences for users based on their interests and behavior.
 
