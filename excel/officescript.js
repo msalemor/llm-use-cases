@@ -4,9 +4,9 @@ async function main(workbook: ExcelScript.Workbook) {
         role: "user", content: sheet.getRange("c2").getValue().toString()
     }];
     const payload: IPrompt = {
-        messages,
-        max_tokens: 100,
-        temperature: 0.3
+        messages, // TODO: Get from cells
+        max_tokens: 100, // TODO: Get from cell
+        temperature: 0.3 // TODO: Get from cell
     };
     const settings = {
         method: 'POST',
@@ -19,12 +19,12 @@ async function main(workbook: ExcelScript.Workbook) {
     };
     const crmGPTURI = 'https://<NAME>.openai.azure.com/openai/deployments/<DEPLOYMENT_NAME>/chat/completions?api-version=2023-07-01-preview';
     const fetchResult = await fetch(crmGPTURI, settings);
-    const json: IChatCompletion = await fetchResult.json();
-    sheet.getRange("c4").setValue(json.choices[0].message.content);
+    const json: IChatCompletion = await fetchResult.json();    
+    sheet.getRange("c4").setValue(json.choices[0].message.content); //TODO: Maybe parse output across cells
 }
 // GPT Interfaces
 interface IPrompt { messages: IMessage[], max_tokens: number, temperature: number }
-interface IMessage {role:string, content:string}
+interface IMessage {role: string, content: string}
 interface IUsage {prompt_tokens: number, completion_tokens: number, total_tokens: number}
 interface IChoice {message: IMessage, finish_reason: string, index: number}
 interface IChatCompletion {id: string, object: object, created: number, model: string, usage: IUsage, choices: IChoice[]}
