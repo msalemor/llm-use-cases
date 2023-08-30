@@ -1,6 +1,6 @@
 async function main(workbook: ExcelScript.Workbook) {
     const sheet = workbook.getWorksheet("Sheet1");
-    var messages : IMessage[] =  [{
+    const messages : IMessage[] =  [{
         role: "user", content: sheet.getRange("c2").getValue().toString()
     }];
     const payload: IPrompt = {
@@ -17,10 +17,10 @@ async function main(workbook: ExcelScript.Workbook) {
         },
         body: JSON.stringify(payload)
     };
-    const crmGPTURI = 'https://<NAME>.openai.azure.com/openai/deployments/<DEPLOYMENT_NAME>/chat/completions?api-version=2023-07-01-preview';
-    const fetchResult = await fetch(crmGPTURI, settings);
-    const json: IChatCompletion = await fetchResult.json();    
-    sheet.getRange("c4").setValue(json.choices[0].message.content); //TODO: Maybe parse output across cells
+    const gptURI = 'https://<NAME>.openai.azure.com/openai/deployments/<DEPLOYMENT_NAME>/chat/completions?api-version=2023-07-01-preview';
+    const response = await fetch(gptURI, settings);
+    const completion: IChatCompletion = await response.json();    
+    sheet.getRange("c4").setValue(completion.choices[0].message.content); //TODO: Maybe parse output across cells
 }
 // GPT Interfaces
 interface IPrompt { messages: IMessage[], max_tokens: number, temperature: number }
