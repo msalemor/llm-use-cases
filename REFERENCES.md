@@ -52,11 +52,12 @@
 
 - [Code: Semantic Kernel RAG Pattern Application](https://github.com/Azure-Samples/semantic-kernel-rag-chat)
 - [Code: Semantic Kernel RAG Pattern-C# Interative Notebook](https://github.com/msalemor/openai-sk-demos/blob/main/notebooks/sk-rag-pattern.ipynb)
-- [Code: Semantic Kernel RAG Patter-C# Minimal API](https://github.com/msalemor/rag-sk-minimal-api)
+- [Code: Semantic Kernel RAG Pattern-C# Minimal API](https://github.com/msalemor/rag-sk-minimal-api)
 
 ## Summarizer Pattern (Map Reduce/Refine)
 
 - [SK Summarizer Pattern](https://github.com/msalemor/openai-sk-demos/blob/main/notebooks/sk-summarizer-pattern.ipynb)
+- [5 Levels Of Summarization: Novice to Expert](https://github.com/gkamradt/langchain-tutorials/blob/main/data_generation/5%20Levels%20Of%20Summarization%20-%20Novice%20To%20Expert.ipynb)
 
 ## Responsible AI
 
