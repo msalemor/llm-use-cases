@@ -66,3 +66,4 @@
 ## LLM Application Development Tutorial
 
 - [Introduction to Semantic Kernel Development](https://github.com/msalemor/openai-sk-demos)
+- [Best Practices in API Design](https://swagger.io/resources/articles/best-practices-in-api-design/)
