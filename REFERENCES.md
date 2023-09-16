@@ -5,38 +5,47 @@
 - [Azure OpenAI REST API reference](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference)
 - [OpenAI REST reference](https://platform.openai.com/docs/api-reference)
 
-## Tokens articles and tools
+## Tokens and tools
 
 - [OpenAI Tokenizer](https://platform.openai.com/tokenizer)
 - [OpenAI Token Limits](https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them)
 - [Azure OpenAI Service quotas and limits](https://learn.microsoft.com/en-us/azure/ai-services/openai/quotas-limits)
-- [Let's build GPT: from scratch, in code, spelled out.](https://www.youtube.com/results?search_query=create+an+llm+model)
+- [Video: Let's build GPT: from scratch, in code, spelled out.](https://www.youtube.com/results?search_query=create+an+llm+model)
   - **Note:** This is a great video to understand the relationship between words, tokens, how tokens are converted to number vectors, and LLM models
+
+## Fine-tuning
+
+- [OpenAI Fine-Tuning](https://platform.openai.com/docs/guides/fine-tuning)
+- [Video: OpenAI Q&A: Finetuning GPT-3 vs Semantic Search - which to use, when, and why?](https://www.youtube.com/watch?v=9qq6HTr7Ocw)
 
 ## SDKs
 
 - [Semantic Kernel](https://github.com/microsoft/semantic-kernel)
 - [LangChain](https://docs.langchain.com/docs/)
-- [Azure OpenAI nuget package](https://www.nuget.org/packages/Azure.AI.OpenAI/)
+- [Video: Azure OpenAI nuget package](https://www.nuget.org/packages/Azure.AI.OpenAI/)
 
 ## Prompt Engineering
 
 - [How to write "System" Instructions for OpenAI's GPT-4 Chat API](https://www.rootstrap.com/blog/how-to-write-system-instructions-for-openais-gpt-4-chat-api)
 - [Best practices for prompt engineering with OpenAI API](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api)
 - [GPT best practices](https://platform.openai.com/docs/guides/gpt-best-practices)
-- [The ULTIMATE Advanced Guide to Prompt Engineering with GPT-4 | AI Core Skills](https://www.youtube.com/watch?v=-XivIt_5oSw)
+- [Video: The ULTIMATE Advanced Guide to Prompt Engineering with GPT-4 | AI Core Skills](https://www.youtube.com/watch?v=-XivIt_5oSw)
 
 ## Text Chunking
 
 - [Chunking Strategies for LLM Applications](https://www.pinecone.io/learn/chunking-strategies/)
-- [Chunking methods for LLMs](https://www.youtube.com/watch?v=Rt6G3QaEAUA)
+- [Video: Chunking methods for LLMs](https://www.youtube.com/watch?v=Rt6G3QaEAUA)
 
 ## Embeddings and Vector Databases
 
-- [OpenAI Embeddings and Vector Databases Crash Course](https://www.youtube.com/watch?v=ySus5ZS0b94)
-- [Introducing Vector Search in Azure Cognitive Search | Azure Friday](https://www.youtube.com/watch?v=Bd9LWW4cxEU)
+- [Video: OpenAI Embeddings and Vector Databases Crash Course](https://www.youtube.com/watch?v=ySus5ZS0b94)
+- [Video: Introducing Vector Search in Azure Cognitive Search | Azure Friday](https://www.youtube.com/watch?v=Bd9LWW4cxEU)
 - [Semantic Kernel Memories](https://learn.microsoft.com/en-us/semantic-kernel/memories/)
 - [LangChain Memory](https://python.langchain.com/docs/modules/memory/)
+
+## Grounding
+
+- [Grounding LLMs](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/grounding-llms/ba-p/3843857)
 
 ## RAG Pattern
 
