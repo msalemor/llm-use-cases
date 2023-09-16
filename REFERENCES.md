@@ -42,6 +42,7 @@
 - [Video: Introducing Vector Search in Azure Cognitive Search | Azure Friday](https://www.youtube.com/watch?v=Bd9LWW4cxEU)
 - [Semantic Kernel Memories](https://learn.microsoft.com/en-us/semantic-kernel/memories/)
 - [LangChain Memory](https://python.langchain.com/docs/modules/memory/)
+- [Machine Learning Fundamentals: Cosine Similarity and Cosine Distance](https://medium.com/geekculture/cosine-similarity-and-cosine-distance-48eed889a5c4)
 
 ## Grounding
 
