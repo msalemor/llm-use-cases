@@ -49,9 +49,9 @@
 
 ## RAG Pattern
 
-- [Semantic Kernel RAG Pattern](https://github.com/Azure-Samples/semantic-kernel-rag-chat)
-- [Semantic Kernel RAG Pattern-C# Interative Notebook](https://github.com/msalemor/openai-sk-demos/blob/main/notebooks/sk-rag-pattern.ipynb)
-- [Semantic Kernel RAG Patter-C# Minimal API](https://github.com/msalemor/rag-sk-minimal-api)
+- [Code: Semantic Kernel RAG Pattern Application](https://github.com/Azure-Samples/semantic-kernel-rag-chat)
+- [Code: Semantic Kernel RAG Pattern-C# Interative Notebook](https://github.com/msalemor/openai-sk-demos/blob/main/notebooks/sk-rag-pattern.ipynb)
+- [Code: Semantic Kernel RAG Patter-C# Minimal API](https://github.com/msalemor/rag-sk-minimal-api)
 
 ## Summarizer Pattern (Map Reduce/Refine)
 
