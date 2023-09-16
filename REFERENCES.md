@@ -57,6 +57,11 @@
 
 - [SK Summarizer Pattern](https://github.com/msalemor/openai-sk-demos/blob/main/notebooks/sk-summarizer-pattern.ipynb)
 
-## Tutorials
+## Responsible AI
+
+- Responsible and trusted AI](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/innovate/best-practices/trusted-ai)
+- [Video: ChatGPT and Responsible AI](https://www.youtube.com/watch?v=Vy6yfS0W70k)
+
+## LLM Application Development Tutorial
 
 - [Introduction to Semantic Kernel Development](https://github.com/msalemor/openai-sk-demos)
