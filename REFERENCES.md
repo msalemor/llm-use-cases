@@ -61,7 +61,7 @@
 
 ## Responsible AI
 
-- Responsible and trusted AI](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/innovate/best-practices/trusted-ai)
+- [Responsible and trusted AI](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/innovate/best-practices/trusted-ai)
 - [Video: ChatGPT and Responsible AI](https://www.youtube.com/watch?v=Vy6yfS0W70k)
 
 ## LLM Application Development Tutorial
