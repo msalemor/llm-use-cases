@@ -2,7 +2,7 @@
 
 I would argue that it is difficult to learn to develop LLM-powered apps without actually writing these apps. Equally important is understanding some of the main LLM application development concerns to truly make the most of these technologies in apps and solutions.
 
-## OpenAI Model REST API Reference
+## OpenAI REST API Reference
 
 - [Azure OpenAI REST API reference](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference)
 - [OpenAI REST reference](https://platform.openai.com/docs/api-reference)
@@ -18,7 +18,7 @@ I would argue that it is difficult to learn to develop LLM-powered apps without 
 - [Azure OpenAI Service quotas and limits](https://learn.microsoft.com/en-us/azure/ai-services/openai/quotas-limits)
 - [OpenAI Tokenizer](https://platform.openai.com/tokenizer)
 - [Video: Let's build GPT: from scratch, in code, spelled out.](https://www.youtube.com/results?search_query=create+an+llm+model)
-  - **Note:** This is a great video to understand the relationship between words, tokens, how tokens are converted to number vectors, and LLM models
+  - **Note:** This is a great video to understand the relationship between words, tokens, how tokens are converted to number vectors and LLM models
 
 ## Fine-tuning
 
