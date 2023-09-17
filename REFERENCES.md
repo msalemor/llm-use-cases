@@ -29,6 +29,7 @@
 - [How to write "System" Instructions for OpenAI's GPT-4 Chat API](https://www.rootstrap.com/blog/how-to-write-system-instructions-for-openais-gpt-4-chat-api)
 - [Best practices for prompt engineering with OpenAI API](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api)
 - [GPT best practices](https://platform.openai.com/docs/guides/gpt-best-practices)
+- [A developer’s guide to prompt engineering and LLMs](https://github.blog/2023-07-17-prompt-engineering-guide-generative-ai-llms/)
 - [Video: The ULTIMATE Advanced Guide to Prompt Engineering with GPT-4 | AI Core Skills](https://www.youtube.com/watch?v=-XivIt_5oSw)
 
 ## Text Chunking
