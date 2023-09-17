@@ -2,7 +2,7 @@
 
 I would argue that it is difficult to learn to develop LLM-powered apps without actually writing these apps. Equally important is understanding some of the main LLM application development concerns to truly make the most of these technologies in apps and solutions.
 
-## OpenAI Model References
+## OpenAI Model REST API Reference
 
 - [Azure OpenAI REST API reference](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference)
 - [OpenAI REST reference](https://platform.openai.com/docs/api-reference)
@@ -14,9 +14,9 @@ I would argue that it is difficult to learn to develop LLM-powered apps without 
 
 ## Tokens and tools
 
-- [OpenAI Tokenizer](https://platform.openai.com/tokenizer)
 - [OpenAI Token Limits](https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them)
 - [Azure OpenAI Service quotas and limits](https://learn.microsoft.com/en-us/azure/ai-services/openai/quotas-limits)
+- [OpenAI Tokenizer](https://platform.openai.com/tokenizer)
 - [Video: Let's build GPT: from scratch, in code, spelled out.](https://www.youtube.com/results?search_query=create+an+llm+model)
   - **Note:** This is a great video to understand the relationship between words, tokens, how tokens are converted to number vectors, and LLM models
 
@@ -25,12 +25,6 @@ I would argue that it is difficult to learn to develop LLM-powered apps without 
 - [OpenAI Fine-Tuning](https://platform.openai.com/docs/guides/fine-tuning)
 - [Video: OpenAI Q&A: Finetuning GPT-3 vs Semantic Search - which to use, when, and why?](https://www.youtube.com/watch?v=9qq6HTr7Ocw)
 
-## SDKs
-
-- [Semantic Kernel](https://github.com/microsoft/semantic-kernel)
-- [LangChain](https://docs.langchain.com/docs/)
-- [Video: Azure OpenAI nuget package](https://www.nuget.org/packages/Azure.AI.OpenAI/)
-
 ## Prompt Engineering
 
 - [How to write "System" Instructions for OpenAI's GPT-4 Chat API](https://www.rootstrap.com/blog/how-to-write-system-instructions-for-openais-gpt-4-chat-api)
@@ -38,6 +32,23 @@ I would argue that it is difficult to learn to develop LLM-powered apps without 
 - [GPT best practices](https://platform.openai.com/docs/guides/gpt-best-practices)
 - [A developer’s guide to prompt engineering and LLMs](https://github.blog/2023-07-17-prompt-engineering-guide-generative-ai-llms/)
 - [Video: The ULTIMATE Advanced Guide to Prompt Engineering with GPT-4 | AI Core Skills](https://www.youtube.com/watch?v=-XivIt_5oSw)
+
+## Responsible AI
+
+- [Responsible and trusted AI](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/innovate/best-practices/trusted-ai)
+- [Video: ChatGPT and Responsible AI](https://www.youtube.com/watch?v=Vy6yfS0W70k)
+
+## SDKs
+
+- [Semantic Kernel](https://github.com/microsoft/semantic-kernel)
+- [LangChain](https://docs.langchain.com/docs/)
+- [Video: Azure OpenAI nuget package](https://www.nuget.org/packages/Azure.AI.OpenAI/)
+
+
+## LLM Application Development Tutorial
+
+- [Introduction to Semantic Kernel Development](https://github.com/msalemor/openai-sk-demos)
+- [Best Practices in API Design](https://swagger.io/resources/articles/best-practices-in-api-design/)
 
 ## Text Chunking
 
@@ -67,12 +78,3 @@ I would argue that it is difficult to learn to develop LLM-powered apps without 
 - [SK Summarizer Pattern](https://github.com/msalemor/openai-sk-demos/blob/main/notebooks/sk-summarizer-pattern.ipynb)
 - [5 Levels Of Summarization: Novice to Expert](https://github.com/gkamradt/langchain-tutorials/blob/main/data_generation/5%20Levels%20Of%20Summarization%20-%20Novice%20To%20Expert.ipynb)
 
-## Responsible AI
-
-- [Responsible and trusted AI](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/innovate/best-practices/trusted-ai)
-- [Video: ChatGPT and Responsible AI](https://www.youtube.com/watch?v=Vy6yfS0W70k)
-
-## LLM Application Development Tutorial
-
-- [Introduction to Semantic Kernel Development](https://github.com/msalemor/openai-sk-demos)
-- [Best Practices in API Design](https://swagger.io/resources/articles/best-practices-in-api-design/)
