@@ -1,9 +1,16 @@
-# A curated list of reference articles and videos related to the development of LLM/Chatbot powered apps with OpenAI
+# A curated list of reference articles and videos related to the development of LLM/chatbot-powered apps with OpenAI
+
+I would argue that it is difficult to learn to develop LLM-powered apps without actually writing these apps. Equally important is understanding some of the main LLM application development concerns to truly make the most of these technologies in apps and solutions.
 
 ## OpenAI Model References
 
 - [Azure OpenAI REST API reference](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference)
 - [OpenAI REST reference](https://platform.openai.com/docs/api-reference)
+
+## LLM vs Chat models
+
+- [Diffence between models](https://docs.langchain.com/docs/components/models/)
+- [Keeping state]
 
 ## Tokens and tools
 
