@@ -1,6 +1,6 @@
 # A curated list of reference articles and videos related to the development of LLM/chatbot-powered apps with OpenAI's ChatGPT
 
-I would argue that it is difficult to learn to develop LLM-powered apps without actually writing these apps. Equally important is understanding some of the main LLM application development concerns to truly make the most of these technologies in apps and solutions.
+I would argue that it is difficult to learn to develop LLM-powered apps without actually writing these apps. Equally important is the understanding of some of the main LLM concepts and concerns to truly make the most of these technologies in apps and solutions.
 
 ## OpenAI REST API Reference
 
