@@ -73,7 +73,7 @@ I would argue that it is difficult to learn to develop LLM-powered apps without 
 - [Code: Semantic Kernel RAG Pattern-C# Interative Notebook](https://github.com/msalemor/openai-sk-demos/blob/main/notebooks/sk-rag-pattern.ipynb)
 - [Code: Semantic Kernel RAG Pattern-C# Minimal API](https://github.com/msalemor/rag-sk-minimal-api)
 - [Code: Azure Cognitive Search Azure OpenAI Accelerator](https://github.com/MSUSAzureAccelerators/Azure-Cognitive-Search-Azure-OpenAI-Accelerator/tree/main)
-- 
+
 ## Summarizer Pattern (Map Reduce/Refine)
 
 - [SK Summarizer Pattern](https://github.com/msalemor/openai-sk-demos/blob/main/notebooks/sk-summarizer-pattern.ipynb)
