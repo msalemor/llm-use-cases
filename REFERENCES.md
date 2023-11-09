@@ -11,7 +11,7 @@ I would argue that it is difficult to learn to develop LLM-powered apps without 
 
 - [Diffence between models](https://docs.langchain.com/docs/components/models/)
 - [ChatGPT APIs & Managing Conversation Context Memory](https://cobusgreyling.medium.com/chatgpt-apis-managing-conversation-context-memory-8b100dfe544a)
-- [Video: What are Generative AI models?] (https://youtu.be/hfIUstzHs9A?si=Vqq3HqQKyEWmGYi1)
+- [Video: What are Generative AI models?](https://youtu.be/hfIUstzHs9A?si=Vqq3HqQKyEWmGYi1)
 
 ## Tokens and tools
 
