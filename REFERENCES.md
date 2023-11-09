@@ -6,12 +6,12 @@ I would argue that it is difficult to learn to develop LLM-powered apps without 
 
 - [Azure OpenAI REST API reference](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference)
 - [OpenAI REST reference](https://platform.openai.com/docs/api-reference)
+- [Video: What are Generative AI models?](https://youtu.be/hfIUstzHs9A?si=Vqq3HqQKyEWmGYi1)
 
 ## LLM vs Chat models
 
 - [Diffence between models](https://docs.langchain.com/docs/components/models/)
 - [ChatGPT APIs & Managing Conversation Context Memory](https://cobusgreyling.medium.com/chatgpt-apis-managing-conversation-context-memory-8b100dfe544a)
-- [Video: What are Generative AI models?](https://youtu.be/hfIUstzHs9A?si=Vqq3HqQKyEWmGYi1)
 
 ## Tokens and tools
 
