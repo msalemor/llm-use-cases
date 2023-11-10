@@ -11,4 +11,5 @@
 - [Content generation and Personalization](GENERATION.md)
   - Generate a sales car description 
 - [Intent and entities - A LUIS-like scenario](INTENT.md)
+  - Find the user's intent and entities
 
