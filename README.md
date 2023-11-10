@@ -1,4 +1,4 @@
-# LLM/Foundation Model
+# LLM/Foundational Model
 
 ## Common Use Cases
 
