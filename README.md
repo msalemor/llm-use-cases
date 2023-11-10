@@ -3,7 +3,7 @@
 ## Common Use Cases
 
 - [Summarization & Risk Analysis](SUMMARIZATION.md)
-  - Look at a contract summarize it, and identify the risks.
+  - Get a contract, summarize it, and identify the risks.
 - [Recommendation system](RECOMMENDATION.md)
   - Recommend from an up-to-date list of restaurants
 - [Language Translation](TRANSLATION.md)
