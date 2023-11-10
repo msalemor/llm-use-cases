@@ -6,5 +6,5 @@
 - [Recommendation system](RECOMMENDATION.md)
 - [Language Translation](TRANSLATION.md)
 - [Content generation and Personalization](GENERATION.md)
-- [LUIS - Intent and entities](LUIS.md)
+- [LUIS - Intent and entities](INTENT.md)
 
