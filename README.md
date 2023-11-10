@@ -1,4 +1,4 @@
-# OpenAI - Common Use Cases
+# LLM/Foundation Model - Common Use Cases
 
 ## Common Use Cases
 
