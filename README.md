@@ -3,8 +3,12 @@
 ## Common Use Cases
 
 - [Summarization & Risk Analysis](SUMMARIZATION.md)
+  - Look at a contract summarize it, and identify the risks.
 - [Recommendation system](RECOMMENDATION.md)
+  - Recommend from an up-to-date list of restaurants
 - [Language Translation](TRANSLATION.md)
+  - Translate technical text from a target to a source language
 - [Content generation and Personalization](GENERATION.md)
-- [Intent and entities - A LUIS like scenario](INTENT.md)
+  - Generate a sales car description 
+- [Intent and entities - A LUIS-like scenario](INTENT.md)
 
