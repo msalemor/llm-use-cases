@@ -12,4 +12,5 @@
   - Generate a sales car description 
 - [Intent and entities - A LUIS-like scenario](INTENT.md)
   - Find the user's intent and entities
-
+- [RAG Pattern without a vector database](RAGNODB.md)
+  - Provide the container and answer the question based only on the provided content.
