@@ -2,9 +2,9 @@
 
 ## Common Use Cases
 
-- Summarization & Risk Analysis
-- Recommendation system
-- Language Translation
-- Content generation and Personalization
-- Prompting and completion from your own content
+- [Summarization & Risk Analysis](SUMMARIZATION.md)
+- [Recommendation system](RECOMMENDATION.md)
+- [Language Translation](TRANSLATION.md)
+- [Content generation and Personalization](GENERATION.md)
+- [LUIS - Intent and entities](LUIS.md)
 
