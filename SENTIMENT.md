@@ -4,14 +4,14 @@ Code:
 
 ```python
 # Execute the SK function
-score_total = 0
+total_score = 0
 for review in reviews:
     data = str(sentiment_func(review))
     score = json.loads(data)['sentiment']
     print(f'Review: {review[0:60]}, Score: {score}')
-    score_total += score
+    total_score += score
 
-print("Average sentiment score: {}".format(score_total/len(reviews)))
+print("Average sentiment score: {}".format(total_score/len(reviews)))
 ```
 
 Output:
