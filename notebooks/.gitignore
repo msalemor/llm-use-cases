@@ -2,3 +2,4 @@
 .env
 .python-version
 __pycache__
+*.local
