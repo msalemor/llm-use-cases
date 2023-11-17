@@ -30,6 +30,8 @@ OPENAI_ADA_DEPLOYMENT=<ADA_DEPLOYMENT_NAME>
 - [Sentiment Analysis - Zero Shot](SENTIMENT.md)
   - Sentiment Analysis  
 - [Scoring - Zero Shot](SCORING.md)
-  - Scoring  
+  - Scoring
+- [Classification](CLASSIFICATION.md)
+  - Classification
 - [RAG Pattern without a vector database](RAGNODB.md)
   - Provide the container and answer the question based only on the provided content.
