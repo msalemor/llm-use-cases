@@ -1,4 +1,6 @@
-# LLM/Foundational Model
+# Foundational Model Use Cases
+
+## Foundational Models
 
 ## Requirements
 
