@@ -63,6 +63,7 @@ I would argue that it is difficult to learn to develop LLM-powered apps without 
 - [Semantic Kernel Memories](https://learn.microsoft.com/en-us/semantic-kernel/memories/)
 - [LangChain Memory](https://python.langchain.com/docs/modules/memory/)
 - [Machine Learning Fundamentals: Cosine Similarity and Cosine Distance](https://medium.com/geekculture/cosine-similarity-and-cosine-distance-48eed889a5c4)
+- [Video: Data for the era of AI: Build intelligent apps with Azure Cosmos DB](https://ignite.microsoft.com/en-US/sessions/26dc83cc-35af-4ca2-b300-940234ddc921?source=sessions)
 
 ## Grounding
 
