@@ -3,6 +3,7 @@ import semantic_kernel as sk
 from semantic_kernel.connectors.ai.open_ai import AzureChatCompletion, AzureTextEmbedding
 from dotenv import load_dotenv
 import tiktoken
+from openai import AzureOpenAI
 
 load_dotenv()
 
@@ -41,3 +42,10 @@ def get_max_tokens(text: str, expected='short') -> int:
         return length + 250
     elif expected == 'long':
         return length + 500
+
+
+def get_openai_client():
+    return AzureOpenAI(
+        api_key=api_KEY,
+        api_version="2023-12-01-preview",
+        azure_endpoint=api_URI)
