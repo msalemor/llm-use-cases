@@ -4,6 +4,9 @@ from semantic_kernel.connectors.ai.open_ai import AzureChatCompletion, AzureText
 from dotenv import load_dotenv
 import tiktoken
 from openai import AzureOpenAI
+from langchain.chat_models import AzureChatOpenAI
+from langchain.schema import HumanMessage
+from jinja2 import Template
 
 load_dotenv()
 
@@ -49,3 +52,32 @@ def get_openai_client():
         api_key=api_KEY,
         api_version="2023-12-01-preview",
         azure_endpoint=api_URI)
+
+
+# os.environ["AZURE_OPENAI_API_KEY"] = api_KEY
+# os.environ["AZURE_OPENAI_ENDPOINT"] = api_URI
+
+
+def get_model():
+    return AzureChatOpenAI(
+        openai_api_version="2023-12-01-preview",
+        azure_deployment=gpt_api_deployment,
+        openai_api_key=api_KEY,
+        openai_api_base=api_URI,
+    )
+
+
+def render_template(template_string, **kwargs) -> str:
+    return Template(template_string).render(**kwargs)
+
+
+def Call_OpenAI(client: AzureOpenAI, deployment_name: str, content: str, max_tokens: int = 100, temperature: float = 0.3) -> str:
+    response = client.chat.completions.create(
+        model=deployment_name,
+        messages=[
+            {"role": "assistant", "content": content},
+        ],
+        max_tokens=max_tokens,
+        temperature=temperature
+    )
+    return str(response.choices[0].message.content)
