@@ -66,9 +66,13 @@ def get_model():
         openai_api_base=api_URI,
     )
 
+# Render a Jinja2 template into a string
+
 
 def render_template(template_string, **kwargs) -> str:
     return Template(template_string).render(**kwargs)
+
+# Call the Azure OpenAI API
 
 
 def Call_OpenAI(client: AzureOpenAI, deployment_name: str, content: str, max_tokens: int = 100, temperature: float = 0.3) -> str:
@@ -81,3 +85,29 @@ def Call_OpenAI(client: AzureOpenAI, deployment_name: str, content: str, max_tok
         temperature=temperature
     )
     return str(response.choices[0].message.content)
+
+# Split a long text into lines
+
+
+def split_sentence(sentence, line_length=80):
+    words = sentence.split()
+    lines = []
+    current_line = ''
+    for word in words:
+        if len(current_line) + len(word) + 1 > line_length:
+            lines.append(current_line)
+            current_line = word
+        else:
+            current_line = current_line + ' ' + word if current_line else word
+    lines.append(current_line)
+    return lines
+
+# Format for Jupyter output
+
+
+def format_output(source, line_length=80):
+    lines = split_sentence(source)
+    out = ""
+    for line in lines:
+        out += line + "\n"
+    return out
