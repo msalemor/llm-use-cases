@@ -16,7 +16,7 @@ gpt_api_deployment = os.getenv("OPENAI_GPT_DEPLOYMENT")
 ada_api_deployment = os.getenv("OPENAI_ADA_DEPLOYMENT")
 
 
-def get_kernel():
+def get_kernel() -> sk.Kernel:
     kernel = sk.Kernel()
 
     kernel.add_chat_service(
@@ -47,7 +47,7 @@ def get_max_tokens(text: str, expected='short') -> int:
         return length + 500
 
 
-def get_openai_client():
+def get_openai_client() -> AzureOpenAI:
     return AzureOpenAI(
         api_key=api_KEY,
         api_version="2023-12-01-preview",
@@ -58,7 +58,7 @@ def get_openai_client():
 # os.environ["AZURE_OPENAI_ENDPOINT"] = api_URI
 
 
-def get_model():
+def get_model() -> AzureChatOpenAI:
     return AzureChatOpenAI(
         openai_api_version="2023-12-01-preview",
         azure_deployment=gpt_api_deployment,
@@ -89,7 +89,7 @@ def Call_OpenAI(client: AzureOpenAI, deployment_name: str, content: str, max_tok
 # Split a long text into lines
 
 
-def split_sentence(sentence, line_length=80):
+def split_sentence(sentence, line_length=80) -> list[str]:
     words = sentence.split()
     lines = []
     current_line = ''
@@ -105,7 +105,7 @@ def split_sentence(sentence, line_length=80):
 # Format for Jupyter output
 
 
-def format_output(source, line_length=80):
+def format_output(source, line_length=80) -> str:
     lines = split_sentence(source)
     out = ""
     for line in lines:
