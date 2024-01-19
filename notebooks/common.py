@@ -12,6 +12,7 @@ load_dotenv()
 
 api_URI = os.getenv("OPENAI_URI")
 api_KEY = os.getenv("OPENAI_KEY")
+api_version = os.getenv("OPENAI_VERSION")
 gpt_api_deployment = os.getenv("OPENAI_GPT_DEPLOYMENT")
 ada_api_deployment = os.getenv("OPENAI_ADA_DEPLOYMENT")
 
@@ -47,11 +48,8 @@ def get_max_tokens(text: str, expected='short') -> int:
         return length + 500
 
 
-def get_openai_client() -> AzureOpenAI:
-    return AzureOpenAI(
-        api_key=api_KEY,
-        api_version="2023-12-01-preview",
-        azure_endpoint=api_URI)
+def get_openai_client(**kwargs) -> AzureOpenAI:
+    return AzureOpenAI(**kwargs)
 
 
 # os.environ["AZURE_OPENAI_API_KEY"] = api_KEY
