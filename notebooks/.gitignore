@@ -1,5 +1,6 @@
 .venv
 .env
+.env.vision
 .python-version
 __pycache__
 *.local
