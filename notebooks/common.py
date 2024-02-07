@@ -109,3 +109,18 @@ def format_output(source, line_length=80) -> str:
     for line in lines:
         out += line + "\n"
     return out
+
+
+def split_sentence(sentence, line_length=120):
+    words = sentence.split()
+    lines = []
+    current_line = ''
+    for word in words:
+        if len(current_line) + len(word) + 1 > line_length:
+            lines.append(current_line)
+            current_line = word
+        else:
+            current_line = current_line + ' ' + word if current_line else word
+    lines.append(current_line)
+    for line in lines:
+        print(line)
