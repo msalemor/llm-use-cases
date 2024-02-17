@@ -74,10 +74,10 @@ Samples:
 
 | Service | Description |
 | ------- | ----------- |
-| Optical Character Recognition (OCR) | The Optical Character Recognition (OCR) service extracts text from images. You can use the new Read API to extract printed and handwritten text from photos and documents. It uses deep-learning-based models and works with text on various surfaces and backgrounds. These include business documents, invoices, receipts, posters, business cards, letters, and whiteboards. The OCR APIs support extracting printed text in several languages. Follow the OCR quickstart to get started. |
-| Image Analysis | The Image Analysis service extracts many visual features from images, such as objects, faces, adult content, and auto-generated text descriptions. Follow the Image Analysis quickstart to get started. |
-| Face | The Face service provides AI algorithms that detect, recognize, and analyze human faces in images. Facial recognition software is important in many different scenarios, such as identification, touchless access control, and face blurring for privacy. Follow the Face quickstart to get started. |
-| Video | Analysis Video Analysis includes video-related features like Spatial Analysis and Video Retrieval. Spatial Analysis analyzes the presence and movement of people on a video feed and produces events that other systems can respond to. Install the Spatial Analysis container to get started. Video Retrieval lets you create an index of videos that you can search with natural language. |
+| Optical Character Recognition (OCR) | The OCR service is designed to extract text from images. With the Read API, you can easily extract both printed and handwritten text from photos and documents. This API utilizes advanced deep-learning models and is capable of working with text on different surfaces and backgrounds. It can handle a wide range of materials such as business documents, invoices, receipts, posters, business cards, letters, and whiteboards. Additionally, the OCR APIs support the extraction of printed text in multiple languages. |
+| Image Analysis | The Image Analysis service can identify various visual elements in images, including objects, faces, explicit content, and automatically generated text descriptions. |
+| Face | The Face service offers artificial intelligence algorithms that can identify, detect, and analyze human faces in pictures. Facial recognition software plays a crucial role in various situations, including identification, touchless access control, and protecting privacy by blurring faces. |
+| Video | Video Analysis involves various features related to videos, such as Spatial Analysis and Video Retrieval. Spatial Analysis examines the existence and motion of individuals within a video stream, generating events that can be utilized by other systems for response. |
 
 **Note:** recommended for real-time image processing
 
