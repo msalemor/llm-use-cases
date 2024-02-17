@@ -17,7 +17,7 @@ graph LR;
   P(Prompt)--Completion-->I(Image);
 ```
 
-Samples:
+Sample:
 
 - [DALL-E 3 - Image Generation](https://github.com/msalemor/llm-use-cases/blob/main/notebooks/dalle-image.ipynb)
 
@@ -32,7 +32,7 @@ Supported models:
 
 - GPT 3.5, 4, 4 Turbo, 4 Vision
 
-Samples:
+Sample:
 
 - [Personal Finance](https://github.com/Azure/AI-in-a-Box/blob/main/gen-ai/Assistants/api-in-a-box/personal_finance/assistant-personal_finance.ipynb)
 
