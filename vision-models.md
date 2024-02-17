@@ -17,6 +17,10 @@ graph LR;
   P(Prompt)--Completion-->I(Image);
 ```
 
+Samples:
+
+- [DALL-E 3 - Image Generation](https://github.com/msalemor/llm-use-cases/blob/main/notebooks/dalle-image.ipynb)
+
 ### Assistants
 
 Assistants can generate:
