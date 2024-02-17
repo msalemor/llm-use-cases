@@ -12,6 +12,11 @@ Scenario:
 
 - User provides a Prompt and the model generates an image.
 
+```mermaid
+graph LR;
+  P(Prompt)-->I(Image);
+```
+
 ### Assistants
 
 Assistants can generate:
@@ -21,7 +26,13 @@ Assistants can generate:
 
 #### Scenario
 
-- User requests a chart of a mathematical equation or or a bar sales bar chart by region.
+- User requests a chart of a mathematical equation or bar chart of revenue by region.
+
+```mermaid
+graph LR;
+  P(Prompt)-->I(Image);
+  P-->T(Text);
+```
 
 ## OpenAI Models that can analyze images
 
@@ -32,6 +43,11 @@ Assistants can generate:
 - Upload an image
 - Describe what is on the image
 - Use the image description as context
+
+```mermaid
+graph LR;
+  P(Prompt + Image)-->D(Image Description + Use in Context)  
+```
 
 Image Support:
 
