@@ -92,4 +92,4 @@ graph LR;
 
 Examples:
 
-- [GPT Video Analysis](https://github.com/Azure/AI-in-a-Box/tree/main/ai-services/gpt-video-analysis-in-a-box)
+- [AI-in-a-box - GPT Video Analysis](https://github.com/Azure/AI-in-a-Box/tree/main/ai-services/gpt-video-analysis-in-a-box)
