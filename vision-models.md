@@ -28,6 +28,10 @@ Supported models:
 
 - GPT 3.5, 4, 4 Turbo, 4 Vision
 
+Samples:
+
+- [Personal Finance](https://github.com/Azure/AI-in-a-Box/blob/main/gen-ai/Assistants/api-in-a-box/personal_finance/assistant-personal_finance.ipynb)
+
 #### Scenario
 
 - User requests a chart of a mathematical equation or bar chart of revenue by region.
@@ -56,6 +60,11 @@ graph LR;
 Image Support:
 
 - PNG (.png), JPEG (.jpeg and .jpg), WEBP (.webp), and non-animated GIF (.gif).
+
+Samples:
+
+- [Compute Selection](https://github.com/msalemor/llm-use-cases/blob/main/notebooks/compute-selection-vision.ipynb)
+- [Generate Bicep Code](https://github.com/msalemor/llm-use-cases/blob/main/notebooks/generate-bicep-vision.ipynb)
 
 ## Azure AI Vision
 
