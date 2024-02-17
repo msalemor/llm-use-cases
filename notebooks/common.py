@@ -15,6 +15,7 @@ api_KEY = os.getenv("OPENAI_KEY")
 api_version = os.getenv("OPENAI_VERSION")
 gpt_api_deployment = os.getenv("OPENAI_GPT_DEPLOYMENT")
 ada_api_deployment = os.getenv("OPENAI_ADA_DEPLOYMENT")
+dalle_deployment = os.getenv("OPENAI_DALLE_DEPLOYMENT")
 
 
 def get_kernel() -> sk.Kernel:
