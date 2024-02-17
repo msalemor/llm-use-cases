@@ -46,7 +46,7 @@ graph LR;
 
 ```mermaid
 graph LR;
-  P(Prompt + Image)-->D(Image Description + Use in Context)  
+  P(Prompt + Image)--Completion-->D(Image Description + Use in Context)  
 ```
 
 Image Support:
