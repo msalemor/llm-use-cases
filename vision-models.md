@@ -81,6 +81,11 @@ Samples:
 
 - Extract faces or items from a video
 
+```mermaid
+graph LR;
+  I(Video Store)-->A(Analysis Video)-->G(GPT-Get description)-->S(Store Results)
+```
+
 Examples:
 
 - [GPT Video Analysis](https://github.com/Azure/AI-in-a-Box/tree/main/ai-services/gpt-video-analysis-in-a-box)
