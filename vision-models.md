@@ -14,7 +14,7 @@ Scenario:
 
 ```mermaid
 graph LR;
-  P(Prompt)-->I(Image);
+  P(Prompt)--Completion-->I(Image);
 ```
 
 ### Assistants
@@ -30,8 +30,8 @@ Assistants can generate:
 
 ```mermaid
 graph LR;
-  P(Prompt)-->I(Image);
-  P-->T(Text);
+  P(Prompt)--Completion-->I(Image);
+  P--Completion-->T(Text);
 ```
 
 ## OpenAI Models that can analyze images
