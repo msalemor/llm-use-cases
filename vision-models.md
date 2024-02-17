@@ -1,6 +1,6 @@
 # Azure OpenAI and AI Vision Services
 
-## OpenAI Models that can generate images
+## OpenAI models that can generate images
 
 ### DALL-E (2/3)
 
@@ -34,7 +34,7 @@ graph LR;
   P--Completion-->T(Text);
 ```
 
-## OpenAI model that can describe images and use in Context
+## OpenAI model that can describe images and use as Context
 
 - GPT 4 with vision
 
