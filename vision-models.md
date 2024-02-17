@@ -19,7 +19,7 @@ graph LR;
 
 Sample:
 
-- [DALL-E 3 - Image Generation](https://github.com/msalemor/llm-use-cases/blob/main/notebooks/dalle-image.ipynb)
+- [Funko Cat](https://github.com/msalemor/llm-use-cases/blob/main/notebooks/dalle-image.ipynb)
 
 ### Assistants
 
@@ -92,4 +92,4 @@ graph LR;
 
 Examples:
 
-- [AI-in-a-box - GPT Video Analysis](https://github.com/Azure/AI-in-a-Box/tree/main/ai-services/gpt-video-analysis-in-a-box)
+- [GPT Video Analysis](https://github.com/Azure/AI-in-a-Box/tree/main/ai-services/gpt-video-analysis-in-a-box)
