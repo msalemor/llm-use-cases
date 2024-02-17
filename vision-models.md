@@ -80,3 +80,7 @@ Samples:
 #### Scenario
 
 - Extract faces or items from a video
+
+Examples:
+
+- [GPT Video Analysis](https://github.com/Azure/AI-in-a-Box/tree/main/ai-services/gpt-video-analysis-in-a-box)
