@@ -81,4 +81,5 @@ Sample:
 
 ### Fine Tuning
 
-- Instructions that tell the model how to behave and go on every prompt might be a good candidate to be fine-tuned (it means you don't need to send them every time)
+- Instructions that tell the model how to behave and go on every prompt might be a good candidate to be fine-tuned
+- It means you don't need to send them every time.
