@@ -21,12 +21,7 @@ Pricing Structure:
 
 - Each model (such as GPT-3.5-Turbo, GPT-4, etc.) is priced per unit, ensuring a predictable cost structure for your AI deployments.
 
-## How are costs calculated
-
-- Input tokens
-- Output tokens
-
-### Current Azure OpenAI Prices (02/2024)
+## Current Azure OpenAI Prices (02/2024)
 
 | Models | Context | Input (Per 1,000 tokens) | Output (Per 1,000 tokens) |
 |------------------------|---------|-------------------------|--------------------------|
