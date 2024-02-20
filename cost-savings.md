@@ -81,5 +81,6 @@ Sample:
 
 ### Fine Tuning
 
-- Instructions that tell the model how to behave and go on every prompt might be a good candidate to be fine-tuned
-- It means you don't need to send them every time.
+- Fine-tuning involves taking a pre-trained model (which has already learned patterns and features on a large dataset) and further training it on a smaller, domain-specific dataset.
+- Transfer Learning: Fine-tuning is essential for transfer learning. Instead of training a large model from scratch, you start with a pre-trained one and fine-tune it for your specific task.
+- Token Efficiency: Compared to using prompts, fine-tuning is often more effective and efficient. By training the model on examples, you can shorten prompts and save input tokens without sacrificing quality.
