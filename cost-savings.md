@@ -1,5 +1,26 @@
 # Azure OpenAI GPT Models<br/>Token Cost Optimization
 
+## Pricing models
+
+ There are two pricing models: Pay-As-You-Go (PAYG) and Provisioned Throughput Units (PTUs). Let’s explore the differences from a cost perspective:
+
+Pay-As-You-Go (PAYG):
+
+- Flexibility: PAYG allows you to pay only for the resources you actually use. It’s ideal for variable workloads where demand fluctuates.
+- Resource Consumption: You are billed based on the actual consumption of model processing resources during inference.
+- Cost Optimization: PAYG optimizes costs by dynamically adjusting based on usage, making it suitable for scenarios with varying workloads.
+
+Provisioned Throughput Units (PTUs):
+
+- Predictability: PTUs provide guaranteed throughput with minimal latency variance. They offer a predictable pricing model.
+- Reserved Capacity: With PTUs, you reserve and deploy a specific amount of model processing capacity in advance.
+- Cost Savings: Depending on your workload volume, Managed PTUs can be more cost-effective than PAYG, especially for consistent performance.
+- Ideal for Scaling: PTUs are well-suited for scaling AI solutions where you need reliable and consistent throughput.
+
+Pricing Structure:
+
+- Each model (such as GPT-3.5-Turbo, GPT-4, etc.) is priced per unit, ensuring a predictable cost structure for your AI deployments.
+
 ## How are costs calculated
 
 - Input tokens
@@ -25,9 +46,10 @@
 
 ### Prompt Engineering
 
+- Carefully design your prompts to be concise and relevant. Remove unnecessary words or phrases to reduce token usage.
 - GPT models are foundational models, as such they can solve many problems.
 - You could break the problem into pieces, but this may results in higher token usage.
-- Or you could ask the prompt to return the results in one prompt.
+- Combine information and questions in a single prompt to achieve more efficient interactions.
 
 Example:
 
@@ -68,6 +90,7 @@ JSON Output format:
 
 ### Use Semantic Cache
 
+- Cache intermediate results or context vectors to avoid redundant computations.
 - This is a more advanced technique, it works by:
   - First determining if a user prompt has already been semantically added to the cache, using embeddings
   - Added to the cache in case of a cache miss,
