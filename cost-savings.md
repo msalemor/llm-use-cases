@@ -60,6 +60,8 @@ JSON Output format:
 - This is particularly important maybe after extracting text from documents like PDFs.
 - Example package:
   - [GPT Trim](https://pypi.org/project/gptrim/)
+- Solutions heavy on RAG might benefit in the LLMLingua compression technique:
+microsoft/LLMLingua: To speed up LLMs' inference and enhance LLM's perceive of key information, compress the prompt and KV-Cache, which achieves up to 20x compression with minimal performance loss. (github.com)
 
 ### Monitor the Completions
 
@@ -76,3 +78,7 @@ JSON Output format:
 Sample:
 
 - [Semantic Cache](https://github.com/msalemor/sk-dev-training/blob/main/notebooks/sk-semantic-cache-redis.ipynb)
+
+### Fine Tuning
+
+- Instructions that tell the model how to behave and go on every prompt might be a good candidate to be fine-tuned (it means you don't need to send them every time)
