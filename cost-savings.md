@@ -60,13 +60,11 @@ JSON Output format:
 - This is particularly important maybe after extracting text from documents like PDFs.
 - Example package:
   - [GPT Trim](https://pypi.org/project/gptrim/)
-- Solutions heavy on RAG might benefit in the LLMLingua compression technique:
-microsoft/LLMLingua: To speed up LLMs' inference and enhance LLM's perceive of key information, compress the prompt and KV-Cache, which achieves up to 20x compression with minimal performance loss. (github.com)
 
-### Monitor the Completions
+#### LLMLingua
 
-- Every Completion return the usage information.
-- Add tooling in your application to keep track of this usage.
+- LLMLingua, developed by Microsoft Research, is a fascinating approach that aims to enhance the efficiency and performance of Large Language Models (LLMs) through prompt compression.
+- By reducing both prompt and generation lengths, LLMLingua helps save computational resources and lowers token costs.
 
 ### Use Semantic Cache
 
@@ -84,3 +82,8 @@ Sample:
 - Fine-tuning involves taking a pre-trained model (which has already learned patterns and features on a large dataset) and further training it on a smaller, domain-specific dataset.
 - Transfer Learning: Fine-tuning is essential for transfer learning. Instead of training a large model from scratch, you start with a pre-trained one and fine-tune it for your specific task.
 - Token Efficiency: Compared to using prompts, fine-tuning is often more effective and efficient. By training the model on examples, you can shorten prompts and save input tokens without sacrificing quality.
+
+### Monitor the Completions
+
+- Every Completion return the usage information.
+- Add tooling in your application to keep track of this usage.
