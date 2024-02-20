@@ -5,7 +5,7 @@
 - Input tokens
 - Output tokens
 
-## Current Azure OpenAI Prices (02/2024)
+### Current Azure OpenAI Prices (02/2024)
 
 | Models | Context | Input (Per 1,000 tokens) | Output (Per 1,000 tokens) |
 |------------------------|---------|-------------------------|--------------------------|
@@ -16,12 +16,14 @@
 | GPT-4 | 8K | $0.03 | $0.06 |
 | GPT-4 | 32K | $0.06 | $0.12 |
 
-## Model considerations
+## Cost Saving Techniques
+
+### Model Selection
 
 - Different models offer different features, performance and cost.
 - For example, consider the the price and features of GPT 4 vs GPT 3.5 turbo. Could you do the meet your requirements by using GPT 3.5?
 
-## Prompt Engineering
+### Prompt Engineering
 
 - GPT models are foundational models, as such they can solve many problems.
 - You could break the problem into pieces, but this may results in higher token usage.
@@ -52,19 +54,19 @@ JSON Output format:
 
 ```
 
-## Trimming the Prompt before Completion
+### Trim the Prompt before Completion
 
 - There are advanced techniques for trimming the Prompt before submitting for Completion.
 - This is particularly important maybe after extracting text from documents like PDFs.
 - Example package:
   - [GPT Trim](https://pypi.org/project/gptrim/)
 
-## Monitor the completions
+### Monitor the Completions
 
 - Every Completion return the usage information.
 - Add tooling in your application to keep track of this usage.
 
-## Semantic Cache
+### Use Semantic Cache
 
 - This is a more advanced technique, it works by:
   - First determining if a user prompt has already been semantically added to the cache, using embeddings
