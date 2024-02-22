@@ -37,7 +37,7 @@ Pricing Structure:
 ### 3.1 Model Selection
 
 - Different models offer different features, performance, and cost.
-- For example, consider the price and features of GPT 4 vs GPT 3.5 turbo.
+- For example, consider the performance (TPM), price, and features of GPT 4 vs GPT 3.5 turbo.
   - Could you meet your requirements by using GPT 3.5?
 
 ### 3.2 Prompt Engineering
