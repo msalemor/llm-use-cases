@@ -36,14 +36,15 @@ Pricing Structure:
 
 ### 3.1 Model Selection
 
-- Different models offer different features, performance and cost.
-- For example, consider the the price and features of GPT 4 vs GPT 3.5 turbo. Could you do the meet your requirements by using GPT 3.5?
+- Different models offer different features, performance, and cost.
+- For example, consider the price and features of GPT 4 vs GPT 3.5 turbo.
+  - Could you meet your requirements by using GPT 3.5?
 
 ### 3.2 Prompt Engineering
 
 - Carefully design your prompts to be concise and relevant. Remove unnecessary words or phrases to reduce token usage.
 - GPT models are foundational models, as such they can solve many problems.
-- You could break the problem into pieces, but this may results in higher token usage.
+- You could break the problem into pieces, but this may result in higher token usage.
 - Combine information and questions in a single prompt to achieve more efficient interactions.
 
 Example:
@@ -73,7 +74,7 @@ JSON Output format:
 
 ### 3.3 Trim the Prompt before Completion
 
-- There are advanced techniques for trimming the Prompt before submitting for Completion.
+- There are advanced techniques for trimming the Prompt before submitting it for Completion.
 - This is particularly important maybe after extracting text from documents like PDFs.
 - Example package:
   - [GPT Trim](https://pypi.org/project/gptrim/)
@@ -103,5 +104,5 @@ Sample:
 
 ### 3.6 Monitor the Completions
 
-- Every Completion return the usage information.
+- Every Completion returns the usage information.
 - Add tooling in your application to keep track of this usage.
