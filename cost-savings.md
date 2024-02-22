@@ -96,13 +96,22 @@ Sample:
 
 - [Semantic Cache](https://github.com/msalemor/sk-dev-training/blob/main/notebooks/sk-semantic-cache-redis.ipynb)
 
-### 3.5 Fine Tuning
+### 3.5 Determine Intent
+
+- Under this scenario, the system determines intent before replying
+- The system could send a Prompt with context to a GPT endpoint for completion ("What is my itinerary?")
+- Or call a dedicated service ("What is the weather in London?)
+
+Sample:
+- [Determine Intent](https://github.com/msalemor/llm-use-cases/blob/main/notebooks/adversarial-prompting/defense-intent-recognition-rag.ipynb)
+
+### 3.6 Fine Tuning
 
 - Fine-tuning involves taking a pre-trained model (which has already learned patterns and features on a large dataset) and further training it on a smaller, domain-specific dataset.
 - Transfer Learning: Fine-tuning is essential for transfer learning. Instead of training a large model from scratch, you start with a pre-trained one and fine-tune it for your specific task.
 - Token Efficiency: Compared to using prompts, fine-tuning is often more effective and efficient. By training the model on examples, you can shorten prompts and save input tokens without sacrificing quality.
 
-### 3.6 Monitor the Completions
+### 3.7 Monitor the Completions
 
 - Every Completion returns the usage information.
 - Add tooling in your application to keep track of this usage.
