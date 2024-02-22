@@ -1,4 +1,4 @@
-# Azure OpenAI GPT Models<br/>Token Optimization
+# Azure OpenAI GPT Models<br/>Token Cost Optimization
 
 ## 1.0 Pricing models
 
