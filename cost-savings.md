@@ -52,7 +52,7 @@ Pricing Structure:
 ### 3.3 Prompt Engineering
 
 - Carefully design your prompts to be concise and relevant. Remove unnecessary words or phrases to reduce token usage.
-- GPT models are foundational models, as such they can solve many problems.
+- GPT models are foundational models, as such they can solve many problems (content generation, translation, analysis, intent, etc.).
 - You could break the problem into pieces, but this may result in higher token usage.
 - Combine information and questions in a single prompt to achieve more efficient interactions.
 
