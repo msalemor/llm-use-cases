@@ -44,10 +44,10 @@ Pricing Structure:
 
 - LLM model (Davinci): Send a Prompt and receive a Completion.
 - Chat Model (GPT 3 or 4): have a conversation. Use the previous conversation as context.
-- A GPT model can be used as an LLM model if no conversation history is sent for Completion.
-- Consider whether the solution can be served with an LLM model. Do you need the conversation state?
-- The chat model will send all history tokens as input.
-- If the chat model is required to meet the requirement, consider how much state should you keep?
+- A Chat model can be used as an LLM model if no conversation history is sent as part of the context for Completion.
+- Consider whether the solution can be served with an LLM model. Do you really need the conversation state?
+- In a Chat model all history tokens will be sent as part of the input.
+- If the Chat model is required to meet the requirement, consider how much state should you keep and send for Completion?
 
 ### 3.3 Prompt Engineering
 
@@ -78,7 +78,6 @@ JSON Output format:
     "es": // Spanish description
 }
 """
-
 ```
 
 ### 3.4 Trim the Prompt before Completion
