@@ -1,6 +1,6 @@
 # Azure OpenAI GPT Models<br/>Token Cost Optimization
 
-![](images/)
+![An image of a Robot pointing to a text caption reading: Token Cost Optionization Techniques](images/token-cost-savings.png)
 
 ## Overview
 
