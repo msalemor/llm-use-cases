@@ -1,4 +1,4 @@
-# Azure OpenAI GPT Models<br/>Token Optimization
+# Azure OpenAI GPT Models<br/>Token Cost Optimization
 
 ## 1.0 Pricing models
 
@@ -104,6 +104,16 @@ JSON Output format:
 Sample:
 
 - [Semantic Cache](https://github.com/msalemor/sk-dev-training/blob/main/notebooks/sk-semantic-cache-redis.ipynb)
+
+### 3.5 Determine Intent
+
+- Under this scenario, the system determines intent before replying
+- The system could send a Prompt with context to a GPT endpoint for completion ("What is my itinerary?")
+- Or call a dedicated service ("What is the weather in London?)
+
+Sample:
+
+- [Determine Intent](https://github.com/msalemor/llm-use-cases/blob/main/notebooks/adversarial-prompting/defense-intent-recognition-rag.ipynb)
 
 ### 3.6 Fine Tuning
 
