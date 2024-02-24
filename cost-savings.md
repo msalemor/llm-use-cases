@@ -80,7 +80,7 @@ JSON Output format:
 """
 ```
 
-### 3.4 Trim the Prompt before Completion
+### 3.4 Trim the Prompt for Completion
 
 - There are advanced techniques for trimming the Prompt before submitting it for Completion.
 - This is particularly important maybe after extracting text from documents like PDFs.
@@ -91,6 +91,10 @@ JSON Output format:
 
 - LLMLingua, developed by Microsoft Research, is a fascinating approach that aims to enhance the efficiency and performance of Large Language Models (LLMs) through prompt compression.
 - By reducing both prompt and generation lengths, LLMLingua helps save computational resources and lowers token costs.
+
+Reference:
+
+- [LLMLingua](https://github.com/microsoft/LLMLingua)
 
 ### 3.5 Use Semantic Cache
 
