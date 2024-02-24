@@ -38,7 +38,7 @@ Pricing Structure:
 
 - Different models offer different features, performance, and cost.
 - For example, consider the performance (TPM), price, and features of GPT 4 vs GPT 3.5 turbo.
-  - Could you meet your requirements by using GPT 3.5?
+  - Could you meet your requirements by using GPT 3.5? Or could you have a solution that goes to GPT 3.5 most of the time and GPT 4 with Vision some of the time?
 
 ### 3.2 LLM vs Chat model
 
