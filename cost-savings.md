@@ -40,7 +40,16 @@ Pricing Structure:
 - For example, consider the performance (TPM), price, and features of GPT 4 vs GPT 3.5 turbo.
   - Could you meet your requirements by using GPT 3.5?
 
-### 3.2 Prompt Engineering
+### 3.2 LLM vs Chat model
+
+- LLM model (Davinci): Send a Prompt and receive a Completion.
+- Chat Model (GPT 3 or 4): have a conversation. Use the previous conversation as context.
+- A GPT model can be used as an LLM model if no conversation history is sent for Completion.
+- Consider whether the solution can be served with an LLM model. Do you need the conversation state?
+- The chat model will send all history tokens as input.
+- If the chat model is required to meet the requirement, consider how much state should you keep?
+
+### 3.3 Prompt Engineering
 
 - Carefully design your prompts to be concise and relevant. Remove unnecessary words or phrases to reduce token usage.
 - GPT models are foundational models, as such they can solve many problems.
@@ -72,19 +81,19 @@ JSON Output format:
 
 ```
 
-### 3.3 Trim the Prompt before Completion
+### 3.4 Trim the Prompt before Completion
 
 - There are advanced techniques for trimming the Prompt before submitting it for Completion.
 - This is particularly important maybe after extracting text from documents like PDFs.
 - Example package:
   - [GPT Trim](https://pypi.org/project/gptrim/)
 
-#### 3.3.1 LLMLingua
+#### 3.4.1 LLMLingua
 
 - LLMLingua, developed by Microsoft Research, is a fascinating approach that aims to enhance the efficiency and performance of Large Language Models (LLMs) through prompt compression.
 - By reducing both prompt and generation lengths, LLMLingua helps save computational resources and lowers token costs.
 
-### 3.4 Use Semantic Cache
+### 3.5 Use Semantic Cache
 
 - Cache intermediate results or context vectors to avoid redundant computations.
 - This is a more advanced technique, it works by:
@@ -96,13 +105,17 @@ Sample:
 
 - [Semantic Cache](https://github.com/msalemor/sk-dev-training/blob/main/notebooks/sk-semantic-cache-redis.ipynb)
 
-### 3.5 Fine Tuning
+### 3.6 Fine Tuning
 
 - Fine-tuning involves taking a pre-trained model (which has already learned patterns and features on a large dataset) and further training it on a smaller, domain-specific dataset.
 - Transfer Learning: Fine-tuning is essential for transfer learning. Instead of training a large model from scratch, you start with a pre-trained one and fine-tune it for your specific task.
 - Token Efficiency: Compared to using prompts, fine-tuning is often more effective and efficient. By training the model on examples, you can shorten prompts and save input tokens without sacrificing quality.
 
-### 3.6 Monitor the Completions
+### 3.7 Monitor the Completions
 
 - Every Completion returns the usage information.
 - Add tooling in your application to keep track of this usage.
+
+Reference:
+
+- [OpenAI Monitoring](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/monitoring)
