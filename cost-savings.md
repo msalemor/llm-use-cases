@@ -1,8 +1,13 @@
 # Azure OpenAI GPT Models<br/>Token Cost Optimization
 
+![](images/)
+
+## Overview
+
+
 ## 1.0 Pricing models
 
- There are two pricing models: Pay-As-You-Go (PAYG) and Provisioned Throughput Units (PTUs). Let’s explore the differences from a cost perspective:
+There are two pricing models: Pay-As-You-Go (PAYG) and Provisioned Throughput Units (PTUs). Let’s explore the differences from a cost perspective:
 
 Pay-As-You-Go (PAYG):
 
