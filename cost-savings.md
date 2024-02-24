@@ -42,12 +42,12 @@ Pricing Structure:
 
 ### 3.2 LLM vs Chat model
 
-- LLM model (Davinci): Send a Prompt and receive a Completion.
-- Chat Model (GPT 3 or 4): have a conversation. Use the previous conversation as context.
+- Some refer to LLM models (Davinci) as ones that return text.
+- Chat models (GPT 3 or 4) are designed to have conversations.
 - A Chat model can be used as an LLM model if no conversation history is sent as part of the context for Completion.
-- Consider whether the solution can be served with an LLM model. Do you really need the conversation state?
-- In a Chat model all history tokens will be sent as part of the input.
-- If the Chat model is required to meet the requirement, consider how much state you should keep and send for Completion?
+- Consider whether the solution can be served with an LLM model or a Chat model used as an LLM model. Do you need the conversation state?
+- In a Chat model, all history tokens will be sent as part of the input.
+- If the Chat model is required to meet the requirement, consider how much state you should keep and send for Completion.
 
 ### 3.3 Prompt Engineering
 
