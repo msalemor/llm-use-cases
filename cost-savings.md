@@ -124,7 +124,7 @@ Sample:
 ### 3.8 Monitor the Completions
 
 - Every Completion returns the usage information.
-- Add tooling in your application to keep track of this usage.
+- Enable monitoring.
 
 Reference:
 
