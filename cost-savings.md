@@ -46,7 +46,7 @@ Pricing Structure:
 - Chat models (GPT 3 or 4) are designed to have conversations.
 - A Chat model can be used as an LLM model if no conversation history is sent as part of the context for Completion.
 - Consider whether the solution can be served with an LLM model or a Chat model used as an LLM model. Do you need the conversation state?
-- In a Chat model, all history tokens will be sent as part of the input.
+- In a Chat model, the input will include all the tokens that make up the history.
 - If the Chat model is required to meet the requirement, consider how much state you should keep and send for Completion.
 
 ### 3.3 Prompt Engineering
