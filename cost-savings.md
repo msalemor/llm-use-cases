@@ -47,7 +47,7 @@ Pricing Structure:
 - A Chat model can be used as an LLM model if no conversation history is sent as part of the context for Completion.
 - Consider whether the solution can be served with an LLM model. Do you really need the conversation state?
 - In a Chat model all history tokens will be sent as part of the input.
-- If the Chat model is required to meet the requirement, consider how much state should you keep and send for Completion?
+- If the Chat model is required to meet the requirement, consider how much state you should keep and send for Completion?
 
 ### 3.3 Prompt Engineering
 
