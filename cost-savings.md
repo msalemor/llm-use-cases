@@ -103,7 +103,6 @@ Reference:
 
 ### 3.5 Use Semantic Cache
 
-- Cache intermediate results or context vectors to avoid redundant computations.
 - This is a more advanced technique, it works by:
   - First determining if a user prompt has already been semantically added to the cache using embeddings
   - Added to the cache in case of a cache miss,
