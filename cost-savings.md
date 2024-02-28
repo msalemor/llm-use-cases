@@ -149,7 +149,7 @@ Según la notificación que recibiste, tienes una invitación para una fiesta en
 
 ```text
 Prompt:
-Eu recibi esta estes convites:
+Eu recibi estes convites:
 - Voce esta convidado para uma festa numa data especial no dia 5 de marco.
 
 Em que datas tenho convites?
