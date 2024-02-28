@@ -128,7 +128,24 @@ Sample:
 - Transfer Learning: Fine-tuning is essential for transfer learning. Instead of training a large model from scratch, you start with a pre-trained one and fine-tune it for your specific task.
 - Token Efficiency: Compared to using prompts, fine-tuning is often more effective and efficient. By training the model on examples, you can shorten prompts and save input tokens without sacrificing quality.
 
-### 3.8 Monitor the Completions
+### 3.8 Other Languages
+
+In English, a token is 75% of an English word. Special characters count as tokens. Languages that have many types of accents may incur higher token costs. In some languages like Spanish and Portuguese, accents could be replaced with non-accented characters. Though this is grammatically incorrect, it could save on token counts whilst still achieving perfect results.
+
+For example, the following Spanish Prompt has several grammatical mistakes like the word `dia` should be `día`, and there should be a question mark `¿` at the start of the sentence.
+
+```text
+Prompt:
+Recibi esta notificacion:
+- Esta invitado a una fiesta en un dia especial en marzo 5, 2024.
+
+En que fechas tengo invitaciones?
+
+Completion:
+Según la notificación que recibiste, tienes una invitación para una fiesta en una fecha especial el 5 de marzo de 2024.
+```
+
+### 3.9 Monitor the Completions
 
 - Every Completion returns the usage information.
 - Enable monitoring.
