@@ -130,9 +130,9 @@ Sample:
 
 ### 3.8 Other Languages
 
-In English, a token is 75% of an English word. Special characters count as tokens. Languages that have many types of accents may incur higher token costs. In some languages like Spanish and Portuguese, accents could be replaced with non-accented characters. Though this is grammatically incorrect, it could save on token counts whilst still achieving perfect results.
-
-For example, the following Spanish Prompt has several grammatical mistakes like the word `dia` should be `día`, and there should be a question mark `¿` at the start of the sentence.
+- In English, a token is 75% of an English word. In other words, 100 English words are about 75 tokes.
+- Special characters count as tokens.
+- Languages that have many types of accents may incur higher token costs. In some languages like Spanish and Portuguese, accents could be replaced with non-accented characters. Though this is grammatically incorrect, it could save on token counts whilst still achieving perfect results. For example, the following Spanish Prompt has several grammatical mistakes like the word `dia` should be `día`, and there should be a question mark `¿` at the start of the sentence.
 
 ```text
 Prompt:
