@@ -134,7 +134,7 @@ Sample:
 - Special characters and accents count as tokens.
 - Languages that have many types of accents and special characters may incur higher token costs. In some languages like Spanish and Portuguese, accents could be replaced with non-accented characters and even some special characters could be removed. Though this may be grammatically incorrect, it could save on token counts whilst still achieving perfect Completion results.
 
-Sample:
+Samples:
 
 ```text
 Prompt:
@@ -147,7 +147,18 @@ Completion:
 Según la notificación que recibiste, tienes una invitación para una fiesta en una fecha especial el 5 de marzo de 2024.
 ```
 
-- The Spanish Prompt has several grammatical mistakes like the word `dia` should be `día`, and there should be a question mark `¿` at the start of the sentence, and yet the Completion came back with the right answer.
+```text
+Prompt:
+Eu recibi esta estes convites:
+- Voce esta convidado para uma festa numa data especial no dia 5 de marco.
+
+Em que datas tenho convites?
+
+Completion:
+Você tem um convite para uma festa em uma data especial no dia 5 de março
+```
+
+- The Prompts above have several grammatical mistakes. In Spanish the word `dia` should be `día`, and there should be a question mark `¿` at the start of the sentence. In Portuguese, the word `voce` should be `você` and `marco` should be `março`. The Completions came back correctly.
 
 ### 3.9 Monitor the Completions
 
