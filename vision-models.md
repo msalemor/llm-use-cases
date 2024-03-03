@@ -46,7 +46,7 @@ graph LR;
   P--Completion-->T(Text);
 ```
 
-## OpenAI model that can describe images and use as Context
+## OpenAI model that can describe or OCR images and use as Context
 
 - GPT 4 with vision
 
