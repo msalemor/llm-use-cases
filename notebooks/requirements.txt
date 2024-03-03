@@ -4,3 +4,6 @@ tiktoken
 semantic-kernel
 openai
 Jinja2
+langchain
+yfinance
+pillow
