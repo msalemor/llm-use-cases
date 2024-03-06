@@ -128,7 +128,12 @@ Sample:
 - Transfer Learning: Fine-tuning is essential for transfer learning. Instead of training a large model from scratch, you start with a pre-trained one and fine-tune it for your specific task.
 - Token Efficiency: Compared to using prompts, fine-tuning is often more effective and efficient. By training the model on examples, you can shorten prompts and save input tokens without sacrificing quality.
 
-### 3.8 Other Languages
+### 3.8 RAG Solutions
+
+- In RAG many parameters can affect the quality of the results including the GPT model, the number of tokens the model support, chunking size, recall limits, the recall relevance, the nearest search technquique (Cosine similiarity, hybrid, etc.), and others.
+- Be mindful as to how these parameters affect the size of context window and ultimately the token count.
+
+### 3.9 Other Languages
 
 - In English, a token is 75% of an English word. In other words, 100 English words are about 75 tokens.
 - Special characters and accents count as tokens.
@@ -160,7 +165,7 @@ Você tem um convite para uma festa em uma data especial no dia 5 de março
 
 - The Prompts above have several grammatical mistakes. In Spanish the word `dia` should be `día`, and there should be a question mark `¿` at the start of the sentence. In Portuguese, the word `voce` should be `você` and `marco` should be `março`. The Completions came back correctly.
 
-### 3.9 Adding progressive instructions and sample
+### 3.10 Adding progressive instructions and sample
 
 - Some scenarios may require providing instructions and samples as part of the context.
 - Consider adding these instructions and samples progressively.
@@ -178,7 +183,7 @@ Customer Table:customerID,name,email
 
 **Note:** In the sample above maybe no instructions are needed if the query is expected to be simple, but maybe a lot of instructions and samples if the query is expected to be very complex.
 
-### 3.10 Monitor the Completions
+### 3.11 Monitor the Completions
 
 - Every Completion returns the usage information.
 - Enable monitoring.
