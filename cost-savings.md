@@ -176,7 +176,7 @@ Order Table: orderID,date,customerID,qty,price
 Customer Table:customerID,name,email
 ```
 
-In the sample above maybe no instructions are needed if the query is expected to be simple, but maybe a lot of instructions and samples if the query is expected to be very complex.
+**Note:** In the sample above maybe no instructions are needed if the query is expected to be simple, but maybe a lot of instructions and samples if the query is expected to be very complex.
 
 ### 3.10 Monitor the Completions
 
