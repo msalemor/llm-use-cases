@@ -11,6 +11,7 @@ from jinja2 import Template
 load_dotenv()
 
 api_URI = os.getenv("OPENAI_URI")
+ada_full_URI = os.getenv("OPENAI_ADA_FULLURI")
 api_KEY = os.getenv("OPENAI_KEY")
 api_version = os.getenv("OPENAI_VERSION")
 gpt_api_deployment = os.getenv("OPENAI_GPT_DEPLOYMENT")
