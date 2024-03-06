@@ -160,7 +160,25 @@ Você tem um convite para uma festa em uma data especial no dia 5 de março
 
 - The Prompts above have several grammatical mistakes. In Spanish the word `dia` should be `día`, and there should be a question mark `¿` at the start of the sentence. In Portuguese, the word `voce` should be `você` and `marco` should be `março`. The Completions came back correctly.
 
-### 3.9 Monitor the Completions
+### 3.9 Adding progressive instructions and sample
+
+- Some scenarios may require providing instructions and samples as part of the context.
+- Consider adding these instructions and samples progressively.
+
+Sample:
+
+```text
+One a scale from 0-10, with 10 being hardest, how complex is the following user request:
+Write a SQL statement to join the order and customer tables by customerID. Find the customer that has had the most sales. 
+
+Schema
+Order Table: orderID,date,customerID,qty,price
+Customer Table:customerID,name,email
+```
+
+In the sample above maybe no instructions are needed if the query is expected to be simple, but maybe a lot of instructions and samples if the query is expected to be very complex.
+
+### 3.10 Monitor the Completions
 
 - Every Completion returns the usage information.
 - Enable monitoring.
