@@ -65,4 +65,4 @@ Sample:
 - It many instances, SMEs may be needed to write the baseline responses.
 
 Example:
-- [Evaluation Notebook Sample - Python](https://github.dev/msalemor/llm-use-cases/notebooks/evaluation.ipynb)
+- [Evaluation Notebook Sample - Python](notebooks/evaluation.ipynb)
