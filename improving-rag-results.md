@@ -13,10 +13,10 @@ So you have developed an intelligent application that leverages RAG. You are get
   - Maybe even consider manual splitting
   - Etc.
 
-- Text Chunk size
+- Text chunk size
   - Determine what is the best chunk size for your content  
 
-- Result limits & Model context window
+- Result limits & model context window
   - Some models support 4k, 32k, and 128k context windows
   - Try to take advantage of the context window, but be mindful of costs
 
@@ -32,7 +32,7 @@ So you have developed an intelligent application that leverages RAG. You are get
 - For example, converting PDF documents to text may generate a lot of white space and character
 - Evaluate if there's a way to trim and clean these documents
 
-## If needed, take control of ingestion
+## Take control of ingestion
 
 - Automatic ingesting techniques may be great for POC scenarios
 - Improving the RAG results may involve taking control of the ingestion stage where you may be able to apply different text splitting techniques and chunk sizes to your data.
@@ -42,7 +42,7 @@ So you have developed an intelligent application that leverages RAG. You are get
 - Create and ingest synthetic documents
 - If you know that your users will be searching for data, maybe there's an opportunity to summarize, and classify the documents for ingestion into synthetic documents specially designed for RAG consumption.
 
-## Move to full summarization if needed
+## Move to full summarization, if needed
 
 - If you are looking the most precise answers, you may have to summarize entire documents
 - Under this summarization technique, a map reduce recursive tecnhique is applied to pieces of of a ducument, and then get a final summary.
