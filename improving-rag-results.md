@@ -2,7 +2,13 @@
 
 ## Overview
 
-So you have developed an intelligent application that leverages RAG. You are getting answers, but would like to get better answers. This document provides recommendations for improving RAG (Retrieval-Augmented Generation) results. It suggests techniques such as text splitting, determining optimal chunk size, setting result limits and model context window, adjusting relevance scores, utilizing native vector database nearest search functionality, and performing trimming and document cleanup. It also suggests taking control of the ingestion process, creating and ingesting synthetic documents, and considering full document summarization if necessary. Evaluating the results and potentially involving subject matter experts in writing baseline responses is emphasized. Overall, these recommendations aim to enhance the performance and accuracy of RAG.
+You have developed an intelligent application that uses RAG (Retrieval-Augmented Generation) to provide answers. However, you want to improve the quality of the answers. This document offers recommendations to enhance the results of RAG.
+
+The suggestions include techniques such as text splitting, determining the optimal chunk size, setting result limits and model context window, adjusting relevance scores, utilizing the native vector database nearest search functionality, and performing trimming and document cleanup.
+
+Additionally, it proposes taking control of the ingestion process, creating and ingesting synthetic documents, and considering full document summarization if necessary. It emphasizes the importance of evaluating the results and involving subject matter experts in writing baseline responses.
+
+By implementing these recommendations, you could enhance the accuracy of your RAG enabled system.
 
 ## Adjust the RAG paramenters
 
