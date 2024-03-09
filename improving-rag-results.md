@@ -1,5 +1,9 @@
 # Improving RAG results
 
+## Overview
+
+So you have developed an intelligent application that leverages RAG. You are getting answers, but would like to get better answers. This document provides recommendations for improving RAG (Retrieval-Augmented Generation) results. It suggests techniques such as text splitting, determining optimal chunk size, setting result limits and model context window, adjusting relevance scores, utilizing native vector database nearest search functionality, and performing trimming and document cleanup. It also suggests taking control of the ingestion process, creating and ingesting synthetic documents, and considering full document summarization if necessary. Evaluating the results and potentially involving subject matter experts in writing baseline responses is emphasized. Overall, these recommendations aim to enhance the performance and accuracy of RAG.
+
 ## Adjust the RAG paramenters
 
 - Text splitting techniques
@@ -9,7 +13,7 @@
   - Maybe even consider manual splitting
   - Etc.
 
-- Text size Chunk size
+- Text Chunk size
   - Determine what is the best chunk size for your content  
 
 - Result limits & Model context window
@@ -49,4 +53,4 @@
 - It many instances, SMEs may be needed to write the baseline responses.
 
 Example:
-[Validation](https://github.dev/msalemor/llm-use-cases/notebooks/validation.ipynb)
+- [Evaluation Notebook Sample](https://github.dev/msalemor/llm-use-cases/notebooks/evaluation.ipynb)
