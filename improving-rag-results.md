@@ -40,8 +40,8 @@ By implementing these recommendations, you could enhance the accuracy of your RA
 
 ## Take control of ingestion
 
-- Automatic ingesting techniques may be great for POC scenarios
-- Improving the RAG results may involve taking control of the ingestion stage where you may be able to apply different text splitting techniques and chunk sizes to your data.
+- Automatic ingesting techniques may be provide good results
+- Improving the RAG results may involve taking control of the ingestion stage where you may be able to apply different text splitting techniques, trimming and cleanup, and chunk sizes to your data.
 
 ## Syntethic documents
 
