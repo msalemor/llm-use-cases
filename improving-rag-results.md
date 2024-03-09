@@ -48,7 +48,7 @@ By implementing these recommendations, you could enhance the accuracy of your RA
 - If you know that your users will be searching for data, maybe there's an opportunity to summarize, and classify the documents for ingestion into synthetic documents specially designed for RAG consumption.
 
 Sample:
-- [FAQ Generator - C#](notebooks/faq-generator-c#.ipynb)
+- [FAQ Generator - C#](notebooks/faq-generator-c%23.ipynb)
 - [FAQ Generator - Python](notebooks/faq-generator.ipynb)
 
 ## Move to full summarization, if needed
