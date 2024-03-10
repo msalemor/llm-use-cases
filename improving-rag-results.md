@@ -64,7 +64,7 @@ Sample:
 - Make sure you evaluate your results
 - It many instances, SMEs may be needed to write the baseline responses.
 - It is a team effort:
-  - Data team could help preparing the input sources and output target
+  - Data team could help in preparing the input sources, data prepartion, and setting up the output target
   - Data Science team could help determining the best text splitting, chunk Size, results evaluation, etc.
   - SMEs could help develop the reference evaluation questions
   - Apps team could help in making the application secure, resilient and performance
