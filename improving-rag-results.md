@@ -59,6 +59,11 @@ Sample:
 Sample:
 - [Semantic Kernel Summarization Notebook](https://github.com/msalemor/sk-dev-training/blob/main/notebooks/sk-summarizer-pattern.ipynb)
 
+## Evaluate RAPTOR
+
+Reference:
+- [RAPTOR Demo](https://github.com/profintegra/raptor-rag/blob/master/demo.ipynb)
+
 ## Evaluate your results
 
 - Make sure you evaluate your results
