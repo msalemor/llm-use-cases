@@ -75,4 +75,5 @@ Reference:
   - Apps team could help in making the application secure, resilient and performance
   
 Example:
+- [Evaluation Notebook Sample - C#](https://github.com/msalemor/llm-use-cases/blob/main/notebooks/evaluation-c%23.ipynb)
 - [Evaluation Notebook Sample - Python](notebooks/evaluation.ipynb)
