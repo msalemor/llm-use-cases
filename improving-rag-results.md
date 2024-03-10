@@ -62,7 +62,7 @@ Sample:
 ### Evaluate RAPTOR
 
 Reference:
-- [RAPTOR PDF](https://arxiv.org/pdf/2401.18059.pdf)
+- [RAPTOR: RECURSIVE ABSTRACTIVE PROCESSING FOR TREE-ORGANIZED RETRIEVAL-PDF](https://arxiv.org/pdf/2401.18059.pdf)
 - [RAPTOR Repo & Notebook](https://github.com/profintegra/raptor-rag/blob/master/demo.ipynb)
 
 ### Evaluate your results
