@@ -10,7 +10,7 @@ Additionally, it proposes taking control of the ingestion process, creating and 
 
 By implementing these recommendations, you could enhance the accuracy of your RAG enabled system.
 
-## Adjust the RAG paramenters
+### Adjust the RAG paramenters
 
 - Text splitting techniques
   - Split by token counts and overflow
@@ -32,17 +32,17 @@ By implementing these recommendations, you could enhance the accuracy of your RA
 - Evaluate and leverage the vector database nearest search capabilities  
   - For example, in Azure AI Search for example, Hybrid Search is a powerful technique that combines both full text and vector queries to retrieve relevant information from a search index.
 
-## Trimming and document cleaunup
+### Trimming and document cleaunup
 
 - For example, converting PDF documents to text may generate a lot of white space and character
 - Evaluate if there's a way to trim and clean these documents
 
-## Take control of ingestion
+### Take control of ingestion
 
 - Automatic ingesting techniques may be provide good results
 - Improving the RAG results may involve taking control of the ingestion stage where you may be able to apply different text splitting techniques, trimming and cleanup, and chunk sizes to your data.
 
-## Syntethic documents
+### Syntethic documents
 
 - Create and ingest synthetic documents
 - If you know that your users will be searching for data, maybe there's an opportunity to summarize, and classify the documents for ingestion into synthetic documents specially designed for RAG consumption.
@@ -51,7 +51,7 @@ Sample:
 - [FAQ Generator - C#](notebooks/faq-generator-c%23.ipynb)
 - [FAQ Generator - Python](notebooks/faq-generator.ipynb)
 
-## Move to full summarization, if needed
+### Move to full summarization, if needed
 
 - If you are looking the most precise answers, you may have to summarize entire documents
 - Under this summarization technique, a map reduce recursive tecnhique is applied to the entire document, and then get a final summary.
@@ -59,12 +59,12 @@ Sample:
 Sample:
 - [Semantic Kernel Summarization Notebook](https://github.com/msalemor/sk-dev-training/blob/main/notebooks/sk-summarizer-pattern.ipynb)
 
-## Evaluate RAPTOR
+### Evaluate RAPTOR
 
 Reference:
 - [RAPTOR Demo](https://github.com/profintegra/raptor-rag/blob/master/demo.ipynb)
 
-## Evaluate your results
+### Evaluate your results
 
 - Make sure you evaluate your results
 - It many instances, SMEs may be needed to write the baseline responses.
@@ -74,6 +74,5 @@ Reference:
   - SMEs could help develop the reference evaluation questions
   - Apps team could help in making the application secure, resilient and performance
   
-
 Example:
 - [Evaluation Notebook Sample - Python](notebooks/evaluation.ipynb)
