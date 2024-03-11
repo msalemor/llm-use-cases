@@ -65,6 +65,10 @@ Reference:
 - [RAPTOR: RECURSIVE ABSTRACTIVE PROCESSING FOR TREE-ORGANIZED RETRIEVAL-PDF](https://arxiv.org/pdf/2401.18059.pdf)
 - [RAPTOR Repo & Notebook](https://github.com/profintegra/raptor-rag/blob/master/demo.ipynb)
 
+### Prompt Engineering
+
+- Give instruction to the prompt to just use the data provided.
+
 ### Evaluate your results
 
 - Make sure you evaluate your results
