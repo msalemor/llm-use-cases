@@ -1,10 +1,10 @@
-# Improving RAG results
+# Improve the RAG response qualisty and accuracy
 
 ## Overview
 
-This document offers techniques to improvce the quality of the results when deploying an intelligent application that includes Resource-Augmented Generation (RAG). The suggestions include techniques such as text splitting, determining the optimal chunk size, setting result limits and model context window, adjusting relevance scores, utilizing the native vector database nearest search functionality, and performing trimming and document cleanup. Additionally, it proposes taking control of the ingestion process, creating and ingesting synthetic documents, and considering full document summarization if necessary. It emphasizes the importance of evaluating the results and involving subject matter experts in writing baseline responses.
+This document offers techniques to improvce quality and accuracy of the results when deploying an intelligent application that includes Resource-Augmented Generation (RAG). The suggestions include techniques such as adjusting the RAG paramenter, utilizing the native vector database nearest search functionality, and performing trimming and document cleanup. Additionally, it proposes taking control of the ingestion process, creating and ingesting synthetic documents, and considering full document summarization if necessary. It emphasizes the importance of evaluating the results and involving subject matter experts in writing baseline responses.
 
-By implementing these techniques, you could enhance the quality and accurary of your RAG enabled system.
+By implementing these techniques, you could improve the quality and accurary of your RAG enabled system.
 
 ### Adjust the RAG paramenters
 
