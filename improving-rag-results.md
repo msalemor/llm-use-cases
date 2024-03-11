@@ -1,4 +1,4 @@
-# Improve the RAG response qualisty and accuracy
+# Improve the RAG response quality and accuracy
 
 ## Overview
 
