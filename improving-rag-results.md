@@ -39,8 +39,8 @@ By implementing these techniques, you could improve the quality and accurary of 
 - Improving the RAG results may involve taking control of the ingestion stage where you may be able to apply different text splitting techniques, trimming and cleanup, and chunk sizes to your data.
 
 Samples:
-- [Embeddings and vectordb building blocks - C#](https://github.com/msalemor/llm-use-cases/blob/main/notebooks/embeddings-cosine-similarity-search-c%23.ipynb)
-- [Embeddings and vectordb building blocks - Python](https://github.com/msalemor/llm-use-cases/blob/main/notebooks/embeddings-cosine-similarity-search.ipynb)
+- [Nearest Search Notebook - C#](https://github.com/msalemor/llm-use-cases/blob/main/notebooks/embeddings-cosine-similarity-search-c%23.ipynb)
+- [Nearest Search Notebook - Python](https://github.com/msalemor/llm-use-cases/blob/main/notebooks/embeddings-cosine-similarity-search.ipynb)
 
 ### Syntethic documents
 
@@ -57,7 +57,7 @@ Sample:
 - Under this summarization technique, a map reduce recursive tecnhique is applied to the entire document, and then get a final summary.
 
 Sample:
-- [Semantic Kernel Summarization Notebook](https://github.com/msalemor/sk-dev-training/blob/main/notebooks/sk-summarizer-pattern.ipynb)
+- [Semantic Kernel Summarization Notebook - C#](https://github.com/msalemor/sk-dev-training/blob/main/notebooks/sk-summarizer-pattern.ipynb)
 
 ### Evaluate RAPTOR
 
