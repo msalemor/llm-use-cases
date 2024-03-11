@@ -42,6 +42,10 @@ By implementing these recommendations, you could enhance the accuracy of your RA
 - Automatic ingesting techniques may be provide good results
 - Improving the RAG results may involve taking control of the ingestion stage where you may be able to apply different text splitting techniques, trimming and cleanup, and chunk sizes to your data.
 
+Samples:
+- [Embeddings and vectordb building blocks - C#](https://github.com/msalemor/llm-use-cases/blob/main/notebooks/embeddings-cosine-similarity-search-c%23.ipynb)
+- [Embeddings and vectordb building blocks - Python](https://github.com/msalemor/llm-use-cases/blob/main/notebooks/embeddings-cosine-similarity-search.ipynb)
+
 ### Syntethic documents
 
 - Create and ingest synthetic documents
