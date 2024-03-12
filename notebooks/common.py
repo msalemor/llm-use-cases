@@ -11,13 +11,14 @@ from jinja2 import Template
 load_dotenv()
 
 api_URI = os.getenv("OPENAI_URI")
-ada_full_URI = os.getenv("OPENAI_ADA_FULLURI")
 api_KEY = os.getenv("OPENAI_KEY")
 api_version = os.getenv("OPENAI_VERSION")
 gpt_api_deployment = os.getenv("OPENAI_GPT_DEPLOYMENT")
-ada_api_deployment = os.getenv("OPENAI_ADA_DEPLOYMENT")
 dalle_deployment = os.getenv("OPENAI_DALLE_DEPLOYMENT")
 
+ada_full_uri = os.getenv("OPENAI_ADA_FULLURI")
+ada_key= os.getenv("OPENAI_ADA_KEY")
+ada_deployment = os.getenv("OPENAI_ADA_MODEL")
 
 def get_kernel() -> sk.Kernel:
     kernel = sk.Kernel()
@@ -26,7 +27,7 @@ def get_kernel() -> sk.Kernel:
         "gpt", AzureChatCompletion(gpt_api_deployment, api_URI, api_KEY))
 
     kernel.add_text_embedding_generation_service(
-        "ada", AzureTextEmbedding(ada_api_deployment, api_URI, api_KEY))
+        "ada", AzureTextEmbedding(ada_deployment, api_URI, api_KEY))
 
     kernel.register_memory_store(memory_store=sk.memory.VolatileMemoryStore())
     kernel.import_skill(sk.core_skills.TextMemorySkill())
