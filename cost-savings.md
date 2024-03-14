@@ -120,7 +120,8 @@ Sample:
 
 Sample:
 
-- [Determine Intent](https://github.com/msalemor/llm-use-cases/blob/main/notebooks/adversarial-prompting/defense-intent-recognition-rag.ipynb)
+- [Determine Intent - c#](notebooks/intent-c%23.ipynb)
+- [Determine Intent - Python](notebooks/intent.ipynb)
 
 ### 3.7 Fine Tuning
 
