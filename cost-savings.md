@@ -116,7 +116,7 @@ Sample:
 
 - Under this scenario, the system determines intent before replying
 - The system could send a Prompt with context to a GPT endpoint for completion ("What is my itinerary?")
-- Or call a dedicated service ("What is the weather in London?) that does not incur token costs
+- Or call a dedicated service ("What is the weather in London?) that does not incur token costs or to a lower cost LLM model
 
 Sample:
 
