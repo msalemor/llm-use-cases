@@ -64,6 +64,32 @@ Sample:
 
 - Give instruction to the prompt to just use the data provided.
 
+### Embedding dimensions
+
+- Text embeddings are vectors that represent text data in a lower-dimensional space.
+- They measure the relatedness of text strings, enabling various applications like search, clustering, recommendations, and more.
+
+- text-ada-02: 1536
+- text-ada-03-small: 256-1536
+- text-ada-03-large: 256-3072
+
+#### Performance and Efficiency:
+
+-Faster Queries: When querying embeddings with fewer dimensions, such as reducing from 1536 to 1024 dimensions, you’ll likely observe faster search queries and less RAM usage1.
+- Cost-Effectiveness: Smaller embeddings require less storage space and computational resources, making them more cost-effective for working with vector databases2.
+
+#### Semantic Information:
+
+- Each dimension in an embedding vector captures specific semantic information.
+- Reducing dimensions may lead to a loss of fine-grained details, affecting the model’s ability to represent complex relationships.
+- However, if done judiciously, it can still retain essential information while improving efficiency.
+
+#### Trade-Offs:
+
+- Accuracy vs. Efficiency: Lower dimensions sacrifice some accuracy for faster processing.
+- Model-Specific Considerations: Some models may perform optimally at specific dimensions (e.g., OpenAI’s text-embedding-ada-002 at 1536 dimensions).
+= Testing and Experimentation: Experimenting with different dimensions helps find the right trade-offs for your specific use case.
+
 ### Evaluate your results
 
 - Make sure you evaluate your results
