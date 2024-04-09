@@ -69,6 +69,8 @@ Sample:
 - Text embeddings are vectors that represent text data in a lower-dimensional space.
 - They measure the relatedness of text strings, enabling various applications like search, clustering, recommendations, and more.
 
+#### Embedding models
+
 - text-ada-02: 1536
 - text-ada-03-small: 256-1536
 - text-ada-03-large: 256-3072
