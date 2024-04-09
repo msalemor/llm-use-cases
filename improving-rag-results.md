@@ -32,6 +32,7 @@ By implementing these techniques, you could improve the quality and accurary of 
 
 - For example, converting PDF documents to text may generate a lot of white space and character
 - Evaluate if there's a way to trim and clean these documents
+- Keep the chunk format as text, but trim the chunk for embedding.
 
 ### Take control of ingestion
 
