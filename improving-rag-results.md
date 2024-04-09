@@ -75,7 +75,7 @@ Sample:
 
 #### Performance and Efficiency:
 
--Faster Queries: When querying embeddings with fewer dimensions, such as reducing from 1536 to 1024 dimensions, you’ll likely observe faster search queries and less RAM usage1.
+- Faster Queries: When querying embeddings with fewer dimensions, such as reducing from 1536 to 1024 dimensions, you’ll likely observe faster search queries and less RAM usage1.
 - Cost-Effectiveness: Smaller embeddings require less storage space and computational resources, making them more cost-effective for working with vector databases2.
 
 #### Semantic Information:
