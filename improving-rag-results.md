@@ -60,12 +60,6 @@ Sample:
 Sample:
 - [Semantic Kernel Summarization Notebook - C#](https://github.com/msalemor/sk-dev-training/blob/main/notebooks/sk-summarizer-pattern.ipynb)
 
-### Evaluate RAPTOR
-
-Reference:
-- [RAPTOR: RECURSIVE ABSTRACTIVE PROCESSING FOR TREE-ORGANIZED RETRIEVAL-PDF](https://arxiv.org/pdf/2401.18059.pdf)
-- [RAPTOR Repo & Notebook](https://github.com/profintegra/raptor-rag/blob/master/demo.ipynb)
-
 ### Prompt Engineering
 
 - Give instruction to the prompt to just use the data provided.
@@ -83,3 +77,9 @@ Reference:
 Example:
 - [Evaluation Notebook Sample - C#](https://github.com/msalemor/llm-use-cases/blob/main/notebooks/evaluation-c%23.ipynb)
 - [Evaluation Notebook Sample - Python](notebooks/evaluation.ipynb)
+
+### Evaluate RAPTOR
+
+Reference:
+- [RAPTOR: RECURSIVE ABSTRACTIVE PROCESSING FOR TREE-ORGANIZED RETRIEVAL-PDF](https://arxiv.org/pdf/2401.18059.pdf)
+- [RAPTOR Repo & Notebook](https://github.com/profintegra/raptor-rag/blob/master/demo.ipynb)
