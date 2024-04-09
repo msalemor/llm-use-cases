@@ -6,7 +6,7 @@ This document offers techniques to improvce quality and accuracy of the results 
 
 By implementing these techniques, you could improve the quality and accurary of your RAG enabled system.
 
-### Adjust the RAG paramenters
+### 1.0 - Adjust the RAG paramenters
 
 - Text splitting techniques
   - Split by token counts and overflow
@@ -28,7 +28,7 @@ By implementing these techniques, you could improve the quality and accurary of 
 - Evaluate and leverage the vector database nearest search capabilities  
   - For example, in Azure AI Search for example, Hybrid Search is a powerful technique that combines both full text and vector queries to retrieve relevant information from a search index.
 
-### Trimming and document cleanup
+### 2.0 - Trimming and document cleanup
 
 - For example, converting PDF documents to text may generate a lot of white space and character
 - Evaluate if there's a way to trim and clean these documents
