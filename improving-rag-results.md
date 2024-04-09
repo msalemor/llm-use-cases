@@ -32,12 +32,12 @@ By implementing these techniques, you could improve the quality and accurary of 
 
 - For example, converting PDF documents to text may generate a lot of white space and character
 - Evaluate if there's a way to trim and clean these documents
-- Keep the chunk format as text, but trim the chunk for embedding.
+- Keep the chunk format for viewing, but trim the chunk for embedding.
 
 ### 3.0 -Take control of ingestion
 
 - Automatic ingesting techniques may be provide good results
-- Improving the RAG results may involve taking control of the ingestion stage where you may be able to apply different text splitting techniques, trimming and cleanup, and chunk sizes to your data.
+- Improving the RAG results may involve taking control of the ingestion stage where you may be able to apply different text splitting techniques, trimming and cleanup, embedding dimensions, and chunk sizes to your data.
 
 Samples:
 - [Nearest Search Notebook - C#](https://github.com/msalemor/llm-use-cases/blob/main/notebooks/embeddings-cosine-similarity-search-c%23.ipynb)
