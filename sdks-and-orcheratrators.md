@@ -40,6 +40,6 @@
 
 - https://github.com/langchain-ai/langchain
 
-## Rust - Candle SDK:
+## Rust (Advanced) - Candle SDK:
 
 - https://github.com/huggingface/candle
