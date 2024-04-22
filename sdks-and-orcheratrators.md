@@ -4,7 +4,7 @@
 
 - All OpenAI endpoints, like completion and embedings, are POST API endpoints 
 - You don't need SDKs to call them
-- Many of my apps do not use any SDKs (including MSConnect Writer). In some of more advanced apps I use Golang and Rust again without SDKs.
+- Many of my apps do not use any SDKs. In some of more advanced apps I use Golang and Rust again without SDKs.
 - For the frontends I use React or SolidJs (writing more in solid lately)
 
 ## C# & Python - Semantic Kernel SDK:
