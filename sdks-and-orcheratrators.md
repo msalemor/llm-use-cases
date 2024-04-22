@@ -20,7 +20,7 @@
 
 ## Python - Semantic Kernel SDK:
 
--https://github.com/microsoft/semantic-kernel/tree/main/python
+- https://github.com/microsoft/semantic-kernel/tree/main/python
 - https://github.com/microsoft/semantic-kernel/tree/main/python/samples/kernel-syntax-examples
 
 ## C# OpenAI SDK:
