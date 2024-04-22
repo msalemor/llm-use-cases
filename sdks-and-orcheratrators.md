@@ -13,10 +13,14 @@
 - https://github.com/openai/openai-python
 - https://github.com/openai/openai-python/tree/main/examples
 
-## C# & Python - Semantic Kernel SDK:
+## C# - Semantic Kernel SDK:
 
-- https://github.com/microsoft/semantic-kernel
+- https://github.com/microsoft/semantic-kernel/tree/main/dotnet
 - https://github.com/microsoft/semantic-kernel/tree/main/dotnet/samples/KernelSyntaxExamples
+
+## Python - Semantic Kernel SDK:
+
+-https://github.com/microsoft/semantic-kernel/tree/main/python
 - https://github.com/microsoft/semantic-kernel/tree/main/python/samples/kernel-syntax-examples
 
 ## C# OpenAI SDK:
