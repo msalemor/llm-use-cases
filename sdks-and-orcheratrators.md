@@ -6,17 +6,18 @@
 - You don't need SDKs to call them
 - Many of my apps do not use any SDKs. In some of more advanced apps I use Golang and Rust again without SDKs.
 - For the frontends I use React or SolidJs (writing more in solid lately)
+- The list ordered in the SDKs I use most to less
+
+## Python OpenAI SDK (includes Assistants API):
+
+- https://github.com/openai/openai-python
+- https://github.com/openai/openai-python/tree/main/examples
 
 ## C# & Python - Semantic Kernel SDK:
 
 - https://github.com/microsoft/semantic-kernel
 - https://github.com/microsoft/semantic-kernel/tree/main/dotnet/samples/KernelSyntaxExamples
 - https://github.com/microsoft/semantic-kernel/tree/main/python/samples/kernel-syntax-examples
-
-## Python OpenAI SDK (includes Assistants API):
-
-- https://github.com/openai/openai-python
-- https://github.com/openai/openai-python/tree/main/examples
 
 ## C# OpenAI SDK:
 
