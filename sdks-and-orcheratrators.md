@@ -23,11 +23,11 @@
 - https://github.com/microsoft/semantic-kernel/tree/main/python
 - https://github.com/microsoft/semantic-kernel/tree/main/python/samples/kernel-syntax-examples
 
-## C# OpenAI SDK:
+## C# - Azure OpenAI SDK:
 
 - https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/openai/Azure.AI.OpenAI/README.md
 
-## C# Assistants API SDK:
+## C# - Azure Assistants API SDK:
 
 - https://github.com/Azure/azure-sdk-for-net/tree/main/sdk/openai/Azure.AI.OpenAI.Assistants
 
