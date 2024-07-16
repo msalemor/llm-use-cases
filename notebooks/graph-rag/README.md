@@ -1,5 +1,18 @@
 # Graph-RAG with LangChain and Neo4j
 
+## Requirements.txt - Python packages 
+
+```text
+langchain
+langchain-community
+langchain-openai
+langchain-experimental
+neo4j
+wikipedia
+tiktoken
+yfiles_jupyter_graphs
+python-dotenv
+```
 
 ## Docker container
 
