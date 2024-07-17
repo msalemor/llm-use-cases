@@ -106,7 +106,7 @@ Example:
 - [Evaluation Notebook Sample - C#](https://github.com/msalemor/llm-use-cases/blob/main/notebooks/evaluation-c%23.ipynb)
 - [Evaluation Notebook Sample - Python](notebooks/evaluation.ipynb)
 
-### 10.0 - Evaluate RAPTOR
+### 9.0 - Evaluate RAPTOR
 
 Reference:
 - [RAPTOR: RECURSIVE ABSTRACTIVE PROCESSING FOR TREE-ORGANIZED RETRIEVAL-PDF](https://arxiv.org/pdf/2401.18059.pdf)
