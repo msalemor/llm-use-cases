@@ -192,3 +192,7 @@ Customer Table:customerID,name,email
 Reference:
 
 - [OpenAI Monitoring](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/monitoring)
+
+### 3.12 - Levarge SLMs in development
+
+- Using SMLs in development and then switching to an LLM may be an optimal way of saving on token costs.
