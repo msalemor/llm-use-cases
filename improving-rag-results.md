@@ -106,10 +106,6 @@ Example:
 - [Evaluation Notebook Sample - C#](https://github.com/msalemor/llm-use-cases/blob/main/notebooks/evaluation-c%23.ipynb)
 - [Evaluation Notebook Sample - Python](notebooks/evaluation.ipynb)
 
-### 9.0 - Levarge SLMs in development
-
-- Using SMLs in development and then switching to an LLM may be an optimal way of saving on token costs.
-
 ### 10.0 - Evaluate RAPTOR
 
 Reference:
