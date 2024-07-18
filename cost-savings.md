@@ -196,3 +196,4 @@ Reference:
 ### 3.12 - Levarge SLMs in development
 
 - Using SMLs in development and then switching to an LLM may be an optimal way of saving on token costs.
+- If you have a machine on-prem with GPU and memory capable of doing inference with SLM models, weight the cost of leveraging this resource vs spinning a VM on the cloud for the same purpose.
