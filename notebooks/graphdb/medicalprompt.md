@@ -1,3 +1,5 @@
+# Using AI to generate sample neo4j relational data
+
 ## Data
 
 ```text
@@ -68,4 +70,48 @@ CREATE (bloodTestJohn)-[:HAS_RESULT]->(bloodTestResultJohn)
 CREATE (chestXRayJohn)-[:HAS_RESULT]->(chestXRayResultJohn)
 CREATE (bloodTestJane)-[:HAS_RESULT]->(bloodTestResultJane)
 CREATE (brainMRI)-[:HAS_RESULT]->(brainMRIResult)
+```
+
+## Original Prompt
+
+```text
+Write in a report format, in paragraphs, giving explanations about the relationships between patients, tests and results.
+
+Example:
+John doe, male, 45 years of age had a cholesterol test on 02/20/203 which came out normal.
+```
+
+## Results
+
+```text
+Certainly! Below is the Neo4j Cypher query to create the entities and relationships based on the provided patient information, tests, and test results.
+
+// Create Patients
+CREATE (john:Patient {name: 'John Doe', age: 45, gender: 'male'})
+CREATE (jane:Patient {name: 'Jane Smith', age: 37, gender: 'female'})
+CREATE (alice:Patient {name: 'Alice Johnson', age: 29, gender: 'female'})
+
+// Create Tests
+CREATE (bloodTestJohn:Test {type: 'Blood Test', subtype: 'Complete Blood Count', date: date('2023-01-15')})
+CREATE (chestXRayJohn:Test {type: 'Chest X-Ray', date: date('2023-03-10')})
+CREATE (bloodTestJane:Test {type: 'Blood Test', date: date('2023-02-20')})
+CREATE (brainMRI:Test {type: 'Brain MRI', date: date('2023-04-05')})
+
+// Create Test Results
+CREATE (bloodTestResultJohn:TestResult {result: 'normal', description: 'Complete Blood Count yielded normal results'})
+CREATE (chestXRayResultJohn:TestResult {result: 'no abnormalities', description: 'Chest X-Ray showed no abnormalities'})
+CREATE (bloodTestResultJane:TestResult {result: 'high cholesterol', description: 'Blood Test indicated high cholesterol levels'})
+CREATE (brainMRIResult:TestResult {result: 'mild concussion', description: 'MRI indicated a mild concussion'})
+
+// Create Relationships
+CREATE (john)-[:UNDERWENT]->(bloodTestJohn)
+CREATE (john)-[:UNDERWENT]->(chestXRayJohn)
+CREATE (jane)-[:UNDERWENT]->(bloodTestJane)
+CREATE (alice)-[:UNDERWENT]->(brainMRI)
+
+CREATE (bloodTestJohn)-[:HAS_RESULT]->(bloodTestResultJohn)
+CREATE (chestXRayJohn)-[:HAS_RESULT]->(chestXRayResultJohn)
+CREATE (bloodTestJane)-[:HAS_RESULT]->(bloodTestResultJane)
+CREATE (brainMRI)-[:HAS_RESULT]->(brainMRIResult)
+This Cypher query creates nodes for each patient, their respective tests, and the results of those tests. It also establishes the relationships between patients and the tests they underwent, as well as the relationships between the tests and their results.
 ```
