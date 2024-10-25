@@ -1,3 +1,4 @@
+from contextlib import asynccontextmanager
 import os
 from neo4j import GraphDatabase, Record
 from pydantic import BaseModel
@@ -6,8 +7,6 @@ from fastapi import FastAPI, HTTPException
 from dotenv import load_dotenv
 
 load_dotenv()
-
-app = FastAPI()
 
 # Neo4j connection details
 NEO4J_URI = os.getenv("NEO4J_URI")
@@ -21,9 +20,44 @@ if not NEO4J_URI or not NEO4J_USER or not NEO4J_PASSWORD:
 # Initialize Neo4j driver
 driver = GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASSWORD))
 
+
+def add_sample_data():
+    sample_patients = [
+        Patient(patient_id="1", name="John Doe", age=30, gender="Male"),
+        Patient(patient_id="2", name="Jane Smith", age=25, gender="Female")
+    ]
+    sample_records = [
+        PatientRecord(patient_id="1", record_type="EHR",
+                      details="General check-up"),
+        PatientRecord(patient_id="1", record_type="Lab",
+                      details="Blood test results"),
+        PatientRecord(patient_id="2", record_type="Imaging",
+                      details="X-ray results")
+    ]
+    for patient in sample_patients:
+        add_patient(patient)
+    for record in sample_records:
+        add_record(record)
+
+    # print(get_patient_records("1"))
+    # print(find_patients_by_gender_and_record_type("Male", "Lab"))
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Load the ML model
+    print("Starting app")
+    add_sample_data()
+    yield
+    # Clean up the ML models and release the resources
+    print("Shutting down app")
+    driver.close()
+
+
+app = FastAPI(lifespan=lifespan)
+
+
 # Pydantic models
-
-
 class Patient(BaseModel):
     patient_id: str
     name: str
@@ -114,29 +148,6 @@ def find_patients_by_gender_and_record_type(gender: str, record_type: str):
             raise HTTPException(
                 status_code=404, detail="No patients found with the given gender and record type")
         return patients
-
-
-@app.on_event("startup")
-def add_sample_data():
-    sample_patients = [
-        Patient(patient_id="1", name="John Doe", age=30, gender="Male"),
-        Patient(patient_id="2", name="Jane Smith", age=25, gender="Female")
-    ]
-    sample_records = [
-        PatientRecord(patient_id="1", record_type="EHR",
-                      details="General check-up"),
-        PatientRecord(patient_id="1", record_type="Lab",
-                      details="Blood test results"),
-        PatientRecord(patient_id="2", record_type="Imaging",
-                      details="X-ray results")
-    ]
-    for patient in sample_patients:
-        add_patient(patient)
-    for record in sample_records:
-        add_record(record)
-
-    get_patient_records("1")
-    find_patients_by_gender_and_record_type("Male", "Lab")
 
 
 if __name__ == "__main__":
