@@ -75,43 +75,46 @@ CREATE (brainMRI)-[:HAS_RESULT]->(brainMRIResult)
 ## Original Prompt
 
 ```text
-Write in a report format, in paragraphs, giving explanations about the relationships between patients, tests and results.
-
-Example:
-John doe, male, 45 years of age had a cholesterol test on 02/20/203 which came out normal.
+Create sample data related to patients and patient results that could be upload to a graph database.
 ```
 
 ## Results
 
 ```text
-Certainly! Below is the Neo4j Cypher query to create the entities and relationships based on the provided patient information, tests, and test results.
+Nodes
+Patients
 
-// Create Patients
-CREATE (john:Patient {name: 'John Doe', age: 45, gender: 'male'})
-CREATE (jane:Patient {name: 'Jane Smith', age: 37, gender: 'female'})
-CREATE (alice:Patient {name: 'Alice Johnson', age: 29, gender: 'female'})
+Patient1: {id: "P001", name: "John Doe", age: 45, gender: "Male"}
+Patient2: {id: "P002", name: "Jane Smith", age: 37, gender: "Female"}
+Patient3: {id: "P003", name: "Alice Johnson", age: 29, gender: "Female"}
+Tests
 
-// Create Tests
-CREATE (bloodTestJohn:Test {type: 'Blood Test', subtype: 'Complete Blood Count', date: date('2023-01-15')})
-CREATE (chestXRayJohn:Test {type: 'Chest X-Ray', date: date('2023-03-10')})
-CREATE (bloodTestJane:Test {type: 'Blood Test', date: date('2023-02-20')})
-CREATE (brainMRI:Test {type: 'Brain MRI', date: date('2023-04-05')})
+Test1: {id: "T001", name: "Blood Test", description: "Complete Blood Count"}
+Test2: {id: "T002", name: "X-Ray", description: "Chest X-Ray"}
+Test3: {id: "T003", name: "MRI", description: "Brain MRI"}
+Results
 
-// Create Test Results
-CREATE (bloodTestResultJohn:TestResult {result: 'normal', description: 'Complete Blood Count yielded normal results'})
-CREATE (chestXRayResultJohn:TestResult {result: 'no abnormalities', description: 'Chest X-Ray showed no abnormalities'})
-CREATE (bloodTestResultJane:TestResult {result: 'high cholesterol', description: 'Blood Test indicated high cholesterol levels'})
-CREATE (brainMRIResult:TestResult {result: 'mild concussion', description: 'MRI indicated a mild concussion'})
+Result1: {id: "R001", value: "Normal", date: "2023-01-15"}
+Result2: {id: "R002", value: "High Cholesterol", date: "2023-02-20"}
+Result3: {id: "R003", value: "No Abnormalities", date: "2023-03-10"}
+Result4: {id: "R004", value: "Mild Concussion", date: "2023-04-05"}
+Relationships
+Patient-Performed-Test
 
-// Create Relationships
-CREATE (john)-[:UNDERWENT]->(bloodTestJohn)
-CREATE (john)-[:UNDERWENT]->(chestXRayJohn)
-CREATE (jane)-[:UNDERWENT]->(bloodTestJane)
-CREATE (alice)-[:UNDERWENT]->(brainMRI)
+Patient1 -[PERFORMED]-> Test1
+Patient1 -[PERFORMED]-> Test2
+Patient2 -[PERFORMED]-> Test1
+Patient3 -[PERFORMED]-> Test3
+Test-Has-Result
 
-CREATE (bloodTestJohn)-[:HAS_RESULT]->(bloodTestResultJohn)
-CREATE (chestXRayJohn)-[:HAS_RESULT]->(chestXRayResultJohn)
-CREATE (bloodTestJane)-[:HAS_RESULT]->(bloodTestResultJane)
-CREATE (brainMRI)-[:HAS_RESULT]->(brainMRIResult)
-This Cypher query creates nodes for each patient, their respective tests, and the results of those tests. It also establishes the relationships between patients and the tests they underwent, as well as the relationships between the tests and their results.
+Test1 -[HAS_RESULT]-> Result1
+Test1 -[HAS_RESULT]-> Result2
+Test2 -[HAS_RESULT]-> Result3
+Test3 -[HAS_RESULT]-> Result4
+Patient-Has-Result
+
+Patient1 -[HAS_RESULT]-> Result1
+Patient1 -[HAS_RESULT]-> Result3
+Patient2 -[HAS_RESULT]-> Result2
+Patient3 -[HAS_RESULT]-> Result4
 ```
