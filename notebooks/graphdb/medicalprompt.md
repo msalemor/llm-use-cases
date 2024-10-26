@@ -13,7 +13,26 @@ John doe, male, 45 years of age had a cholesterol test on 02/20/203 which came o
 <TEXT>
 ```
 
-### Data
+### Text
+
+```text
+Patient1: {id: "P001", name: "John Doe", age: 45, gender: "Male"}
+Patient2: {id: "P002", name: "Jane Smith", age: 37, gender: "Female"}
+Patient3: {id: "P003", name: "Alice Johnson", age: 29, gender: "Female"}
+Tests
+
+Test1: {id: "T001", name: "Blood Test", description: "Complete Blood Count"}
+Test2: {id: "T002", name: "X-Ray", description: "Chest X-Ray"}
+Test3: {id: "T003", name: "MRI", description: "Brain MRI"}
+Results
+
+Result1: {id: "R001", value: "Normal", date: "2023-01-15"}
+Result2: {id: "R002", value: "High Cholesterol", date: "2023-02-20"}
+Result3: {id: "R003", value: "No Abnormalities", date: "2023-03-10"}
+Result4: {id: "R004", value: "Mild Concussion", date: "2023-04-05"}
+```
+
+### Result
 
 ```
 Report on Patient, Test, and Result Relationships
