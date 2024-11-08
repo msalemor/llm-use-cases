@@ -7,3 +7,4 @@ Jinja2
 langchain
 yfinance
 pillow
+pymilvus
