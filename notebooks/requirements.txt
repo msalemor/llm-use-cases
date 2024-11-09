@@ -9,3 +9,5 @@ yfinance
 pillow
 pyautogen
 pymilvus
+langchain-milvus 
+langchain-openai
