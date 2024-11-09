@@ -1,11 +1,9 @@
 import os
 import semantic_kernel as sk
-from semantic_kernel.connectors.ai.open_ai import AzureChatCompletion, AzureTextEmbedding
+#from semantic_kernel.connectors.ai.open_ai import AzureChatCompletion, AzureTextEmbedding
 from dotenv import load_dotenv
 import tiktoken
 from openai import AzureOpenAI
-from langchain.chat_models import AzureChatOpenAI
-from langchain.schema import HumanMessage
 from jinja2 import Template
 
 load_dotenv()
@@ -15,27 +13,10 @@ api_KEY = os.getenv("OPENAI_KEY")
 api_version = os.getenv("OPENAI_VERSION")
 gpt_api_deployment = os.getenv("OPENAI_GPT_DEPLOYMENT")
 dalle_deployment = os.getenv("OPENAI_DALLE_DEPLOYMENT")
-
 ada_full_uri = os.getenv("OPENAI_ADA_FULLURI")
 ada_key= os.getenv("OPENAI_ADA_KEY")
 ada_deployment = os.getenv("OPENAI_ADA_MODEL")
-
-def get_kernel() -> sk.Kernel:
-    kernel = sk.Kernel()
-
-    kernel.add_chat_service(
-        "gpt", AzureChatCompletion(gpt_api_deployment, api_URI, api_KEY))
-
-    kernel.add_text_embedding_generation_service(
-        "ada", AzureTextEmbedding(ada_deployment, api_URI, api_KEY))
-
-    kernel.register_memory_store(memory_store=sk.memory.VolatileMemoryStore())
-    kernel.import_skill(sk.core_skills.TextMemorySkill())
-    return kernel
-
-
 encoding = tiktoken.get_encoding("cl100k_base")
-
 
 def get_tokens(text: str) -> str:
     return encoding.encode(text)
@@ -53,22 +34,6 @@ def get_max_tokens(text: str, expected='short') -> int:
 
 def get_openai_client(**kwargs) -> AzureOpenAI:
     return AzureOpenAI(**kwargs)
-
-
-# os.environ["AZURE_OPENAI_API_KEY"] = api_KEY
-# os.environ["AZURE_OPENAI_ENDPOINT"] = api_URI
-
-
-def get_model() -> AzureChatOpenAI:
-    return AzureChatOpenAI(
-        openai_api_version="2023-12-01-preview",
-        azure_deployment=gpt_api_deployment,
-        openai_api_key=api_KEY,
-        openai_api_base=api_URI,
-    )
-
-# Render a Jinja2 template into a string
-
 
 def render_template(template_string, **kwargs) -> str:
     return Template(template_string).render(**kwargs)
