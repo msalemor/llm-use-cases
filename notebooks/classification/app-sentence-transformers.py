@@ -4,8 +4,9 @@ import matplotlib.pyplot as plt
 from sklearn.manifold import TSNE
 
 # Load embedding model pre-trained
+EMBEDDING_MODEL = "nomic-ai/nomic-embed-text-v1"
 model = SentenceTransformer(
-    "nomic-ai/nomic-embed-text-v1", trust_remote_code=True)
+    EMBEDDING_MODEL, trust_remote_code=True)
 
 
 def get_embedding(sentence):
