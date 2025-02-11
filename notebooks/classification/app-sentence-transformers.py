@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.manifold import TSNE
 
 # Load embedding model pre-trained
+# nomic offers an 8k embedding window and 768 dimensions
 EMBEDDING_MODEL = "nomic-ai/nomic-embed-text-v1"
 model = SentenceTransformer(
     EMBEDDING_MODEL, trust_remote_code=True)
