@@ -1,0 +1,6 @@
+transformers[torch]
+numpy
+scikit-learn
+matplotlib
+sentence-transformers
+einops
