@@ -41,6 +41,13 @@ You are bot that can help evalute the clarity and complexity of a text. Provide 
 
 user:
 Azure API Management (APIM) is an intricate orchestration platform that facilitates the governance and operationalization of APIs within a multifaceted cloud ecosystem. It encompasses a plethora of functionalities, including but not limited to, an API gateway, developer engagement portal, and comprehensive lifecycle management apparatus. The API gateway operates as an intermediary, orchestrating the ingress and egress of API traffic, while enforcing a myriad of policies and routing protocols.
+
+Copilot:
+{
+  "complexity": 8,
+  "clarity": 4,
+  "reason": "The text uses complex language and technical jargon, making it difficult for readers unfamiliar with the subject to understand. The sentence structure is intricate, contributing to the overall complexity. However, the text is well-organized, which slightly aids clarity."
+}
 ```
 
 ## RAG with Word
