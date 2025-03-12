@@ -2,7 +2,7 @@
 
 ## Overview
 
-Office 365 copilots are powerful intent engines. In other words, the copilots will not just execute your prompt, your prompt will be analyzed first, and then the Copile will decide if it has to call other services (for example the weather), to get data (web or corporate), or just call an GenAI engine. These are important concepts to help understand the power behind these copilots.
+Office 365 copilots are powerful intent engines. In other words, the copilots will not just execute your prompt, your prompt will be analyzed first, and then the Copil will decide if it has to call other services to get the weather, to get data web or corporate data (a la RAG), or just call an GenAI engine. Understanding the intent nature of a Copilot prompt, should help you maximize of productiviy of using these copilots.
 
 ## Advanced prompt techniques
 
