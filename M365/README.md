@@ -71,4 +71,9 @@ A Secure Admin Workstation (SAW) is a securely controlled and provisioned workst
 
 ## RAG with Word
 
+- Paste all the text you think you will need to query
+- Save the word document
+- > Note: On the copilot settings, consider turning off the `web content` to force to use only the content on the document
+- On the copilot type, `With this doc, in one paragraph, what is the ...`
+
 ## Excel analysis
