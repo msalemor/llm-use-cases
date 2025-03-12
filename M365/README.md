@@ -1,5 +1,9 @@
 # M365 Copilots - Beyond the Basics
 
+## Overview
+
+Office 365 copilots are powerful intent engines. In other words, the copilots will not just execute your prompt, your prompt will be analyzed first, and then the Copile will decide if it has to call other services (for example the weather), to get data (web or corporate), or just call an GenAI engine. These are important concepts to help understand the power behind these copilots.
+
 ## Advanced prompt techniques
 
 ### Add system and user prompts
@@ -77,3 +81,7 @@ A Secure Admin Workstation (SAW) is a securely controlled and provisioned workst
 - On the copilot type, `With this doc, in one paragraph, what is the ...`
 
 ## Excel analysis
+
+### Overview
+
+Excel Copilot is an even more specialized copilot. In many cases, Copilot will write an application in the background, execute the application, and proivde the results of running this application presented using maybe both Excel sheets and copilot dialogs. In some agent systems. this functionality is called Code Interpreter.
