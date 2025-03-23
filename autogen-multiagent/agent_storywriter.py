@@ -11,10 +11,12 @@ from autogen_agentchat.ui import Console
 from autogen_agentchat.teams import RoundRobinGroupChat
 from autogen_agentchat.conditions import TextMentionTermination
 
+from safedict import ThreadSafeDict
+
 Story_writer = AssistantAgent(
     "Story_writer",
     model_client=get_creative_model_client(),
-    system_message="You are a children book author. Keep the stories short",
+    system_message="You are a very creative children book author. Keep the stories short. If revising the story, write the full story with the revisions.",
 )
 
 # Create the critic agent.
@@ -28,22 +30,23 @@ Story_reviewer = AssistantAgent(
 text_termination = TextMentionTermination("APPROVE")
 
 # Create a team with the primary and critic agents.
-team = RoundRobinGroupChat(
-    [Story_writer, Story_reviewer], termination_condition=text_termination)
 
 # Define the main asynchronous function
 
 
-async def main():
-    # await Console(
-    #     team.run_stream(task="Write a story about a dog living in the moon.")
-    # )  # Stream the messages to the console.
-    res = team.run_stream(task="Write a story about a dog living in the moon.")
+# Replace the sessions dictionary with a thread-safe dictionary
+sessions = ThreadSafeDict()
+
+
+async def process(sessionid: str, task: str) -> None:
+    team = RoundRobinGroupChat(
+        [Story_writer, Story_reviewer], termination_condition=text_termination)
+    res = team.run_stream(task=task)
+    # await Console(res)  # Stream the messages to the console.
     async for message in res:
         # print(message)
         if isinstance(message, str):
-            # print("String message:", message)
-            pass
+            print("String message:", message)
         elif hasattr(message, "content"):
             if hasattr(message, "source"):
                 # print("Message role:", message.role)
@@ -53,8 +56,20 @@ async def main():
             print(message.content + "\n")
         else:
             # print("Other message type:", message)
-            pass
+            sessions.set(sessionid, message)
+            try:
+                msg = message.messages[-1]
+                print(msg)
+            except Exception as e:
+                pass
 
-# Run the asynchronous function
+
+async def main():
+    t1 = process("jdoe", "Write a story about a dog living in the moon.")
+    t2 = process("mdoe", "Write a story a cat in the city.")
+    await asyncio.gather(t1, t2)
+    print(sessions.items())
+
+    # Run the asynchronous function
 if __name__ == "__main__":
     asyncio.run(main())
