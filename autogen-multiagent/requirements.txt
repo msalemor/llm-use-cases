@@ -1,0 +1,4 @@
+python-dotenv
+autogen-agentchat
+autogen-ext[openai,docker]
+rich
