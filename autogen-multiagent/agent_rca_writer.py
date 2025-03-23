@@ -14,10 +14,10 @@ async def mock_get_icm_info(id: str):
     await asyncio.sleep(.1)
     return {
         "id": id,
-        "title": "Azure App Service - Too many 500 HTTP errors",
+        "title": "Too many 500 HTTP errors",
         "status": "pending",
         "priority": "high",
-        "summary": "The Azure App Service is returning 500 HTTP errors out of expected SLA.",
+        "summary": "The service xyz is returning 500 HTTP errors out of expected SLA.",
     }
 
 
