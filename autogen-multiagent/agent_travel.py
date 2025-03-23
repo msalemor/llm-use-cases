@@ -50,7 +50,8 @@ async def main() -> None:
     )
 
     # await Console(team.run_stream(task="Book a 3-day trip to new york."))
-    res = team.run_stream(task="Book a 3-day trip to new york.")
+    res = team.run_stream(
+        task="Book a 3-day trip to new york. I only need a flight.")
     async for message in res:
         # print(message)
         if isinstance(message, str):
@@ -65,7 +66,8 @@ async def main() -> None:
             if isinstance(message.content, str):
                 print(message.content + "\n")
             else:
-                print(type(message.content))
+                # print(type(message.content))
+                pass
 
         else:
             # print("Other message type:", message)

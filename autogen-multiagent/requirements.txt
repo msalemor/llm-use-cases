@@ -1,4 +1,4 @@
 python-dotenv
 autogen-agentchat
-autogen-ext[openai,docker]
+autogen-ext[openai,docker,grpc]
 rich
