@@ -7,7 +7,7 @@ import asyncio
 
 import click
 
-from common import get_model_client
+from common import get_creative_model_client, get_model_client
 az_model_client = get_model_client()
 
 
@@ -35,7 +35,7 @@ planning_agent = AssistantAgent(
 # Create the Writer agent.
 Story_writer = AssistantAgent(
     "Story_writer",
-    model_client=az_model_client,
+    model_client=get_creative_model_client(),
     system_message="You are a helpful AI assistant which write the story. Keep the story short.",
 )
 

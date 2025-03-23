@@ -4,7 +4,7 @@
 import asyncio
 
 import click
-from common import get_model_client
+from common import get_creative_model_client, get_model_client
 
 from autogen_agentchat.agents import AssistantAgent
 from autogen_agentchat.ui import Console
@@ -13,8 +13,8 @@ from autogen_agentchat.conditions import TextMentionTermination
 
 Story_writer = AssistantAgent(
     "Story_writer",
-    model_client=get_model_client(),
-    system_message="You are writer kids story writer. Keep the story short",
+    model_client=get_creative_model_client(),
+    system_message="You are a children book author. Keep the stories short",
 )
 
 # Create the critic agent.
