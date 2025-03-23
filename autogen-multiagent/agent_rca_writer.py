@@ -10,7 +10,7 @@ from common import get_model_client
 model_client = get_model_client()
 
 
-async def get_icm_info(id: str):
+async def mock_get_icm_info(id: str):
     await asyncio.sleep(.1)
     return {
         "id": id,
@@ -33,7 +33,7 @@ async def mock_kusto_query(id: str):
 icm_info = AssistantAgent(
     "get_icm_info",
     model_client,
-    tools=[get_icm_info],
+    tools=[mock_get_icm_info],
     system_message="You are an AI that can get information about IT incidement management system.",
 )
 
