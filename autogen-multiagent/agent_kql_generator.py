@@ -30,8 +30,8 @@ async def mock_get_schema(name: str):
         }
     if name == "system":
         return {
-            "cluster": "france",
-            "database": "paris",
+            "cluster": "master",
+            "database": "services",
             "table": "systems",
             "fields": "systemid (string), name (string), ha (boolean)",
             "description": "",
