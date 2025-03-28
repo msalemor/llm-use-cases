@@ -34,7 +34,7 @@ async def mock_get_schema(name: str) -> dict:
             "database": "services",
             "table": "systems",
             "fields": "systemid (string), name (string), ha (boolean)",
-            "description": "",
+            "description": "this table provides system information.",
         }
     return {}
 
