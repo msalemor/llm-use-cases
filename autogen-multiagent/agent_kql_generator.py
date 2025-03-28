@@ -10,7 +10,7 @@ from common import get_model_client
 model_client = get_model_client()
 
 
-async def mock_get_schema(name: str):
+async def mock_get_schema(name: str) -> dict:
     await asyncio.sleep(.1)
     if name == "logs":
         return {
@@ -36,6 +36,7 @@ async def mock_get_schema(name: str):
             "fields": "systemid (string), name (string), ha (boolean)",
             "description": "",
         }
+    return {}
 
 
 get_schema = AssistantAgent(
