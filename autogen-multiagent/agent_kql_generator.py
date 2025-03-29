@@ -69,13 +69,40 @@ team = RoundRobinGroupChat(
 )
 
 
+async def process_agent_messages(task: str):
+    res = team.run_stream(task=task)
+    print(f"Task:\n{task}\n")
+    async for message in res:
+        if isinstance(message, str):
+            # print("String message:", message)
+            pass
+        elif hasattr(message, "content"):
+            # if hasattr(message, "source"):
+            #     # print("Message role:", message.role)
+            #     click.echo(click.style(message.source +
+            #                "\n", fg='yellow', bold=True))
+            # # print("Message content:", message.content)
+            # print(message.content + "\n")
+            pass
+        else:
+            # print("Other message type:", message)
+            try:
+                print("Result:")
+                print(message.messages[-1].content)
+                print()
+            except Exception as e:
+                pass
+
+    # print(f"Task: {task}")
+    # print(f"Result: {res}")
+
+
 async def main():
-    await Console(team.run_stream(
-        task="Find all the infra events in the last 1 hour",))
-    await Console(team.run_stream(
-        task="Find all the codes events in the last 1 hour. Show the user name.",))
-    await Console(team.run_stream(
-        task="Write a query to find all events by user name and system name in the last 24 hours",))
+    # await Console(team.run_stream(
+    #     task="Find all the infra events in the last 1 hour",))
+    await process_agent_messages(task="Find all the infra events in the last 1 hour")
+    await process_agent_messages(task="Find all the codes events in the last 1 hour. Show the user name.")
+    await process_agent_messages(task="Write a query to find all events by user name and system name in the last 24 hours")
 
 if __name__ == "__main__":
     asyncio.run(main())
