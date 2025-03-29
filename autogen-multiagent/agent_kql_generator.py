@@ -50,8 +50,8 @@ system: system information
 """,
 )
 
-example_classifier_agent = AssistantAgent(
-    "classifier_agent",
+query_classifier_agent = AssistantAgent(
+    "query_classifier_agent",
     model_client,
     system_message="""You are a AI that can classify the type of KQL query. Use the provided schema and the following labels to classify the requested query or user ask:
 
@@ -65,7 +65,7 @@ Query classification: <classification>
 """,
 )
 
-expample_generator = AssistantAgent(
+example_generator = AssistantAgent(
     "expample_generator",
     model_client,
     system_message="""You are an AI that can generate a KQL examples based on the classification labels that you are provided.
@@ -85,7 +85,7 @@ Query Sample: <query>
 """,
 )
 
-gen_kql_query = AssistantAgent(
+kql_query_generator = AssistantAgent(
     "gen_kql_query",
     model_client,
     system_message="""You are an AI that can generate a KQL queries based on the schema provided. 
@@ -97,7 +97,7 @@ Once query is generated finish with 'TERMINATE'.\n""",
 text_termination = TextMentionTermination("TERMINATE")
 
 team = RoundRobinGroupChat(
-    [get_schema, example_classifier_agent, expample_generator, gen_kql_query],
+    [get_schema, query_classifier_agent, example_generator, kql_query_generator],
     termination_condition=text_termination
 )
 
