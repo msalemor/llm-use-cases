@@ -19,8 +19,9 @@ class Message:
 class BaseAgent:
     def __init__(self):
         # Agents share context **THIS IS IMPORTANT**
+        self.name: str | None = None
         self.shared_context: List[Message] = []
-        self.system_prompt = ""
+        self.system_prompt: str | None = None
 
     def switch_context(self, context):
         # if the agent share_context has a systm prompt already, remove it, and add the current system prompt as first one on the list
