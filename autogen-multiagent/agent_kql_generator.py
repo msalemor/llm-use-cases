@@ -93,9 +93,6 @@ async def process_agent_messages(task: str):
             except Exception as e:
                 pass
 
-    # print(f"Task: {task}")
-    # print(f"Result: {res}")
-
 
 async def main():
     # await Console(team.run_stream(
