@@ -43,17 +43,40 @@ def get_model_client():
     return instance
 
 
-global image_client
-image_client = None
+global aoai_client
+aoai_client = None
 
 
-def get_image_client():
-    global image_client
-    if image_client is None:
-        image_client = AsyncAzureOpenAI(
-            azure_deployment="dall-e-3",
+def get_aoai_client():
+    global aoai_client
+    if aoai_client is None:
+        aoai_client = AsyncAzureOpenAI(
             azure_endpoint=AZURE_OPENAI_ENDPOINT,
-            api_version="2024-02-01",
+            api_version=AZURE_OPENAI_API_VERSION,
             api_key=AZURE_OPENAI_API_KEY,
         )
-    return image_client
+    return aoai_client
+
+
+async def completion(messages: list[dict[str, str]] = [], model: str = "gpt-4o", temperature: float = 0.1) -> str:
+    """
+    Sends a list of messages to the OpenAI API and returns the response.
+
+    Args:
+        messages (list): A list of dictionaries containing 'role' and 'content'.
+        model (str): The model to use for the API request.
+        temperature (float): The temperature for the API response.
+
+    Returns:
+        dict: The response from the OpenAI API.
+    """
+
+    # Send the request to the OpenAI API
+    final_messages = [{"role": message["role"],
+                       "content": message["content"]} for message in messages]
+    completion = await get_aoai_client().chat.completions.create(
+        model=model,  # e.g. gpt-35-instant
+        messages=final_messages,
+    )
+
+    return completion.choices[0].message.content
