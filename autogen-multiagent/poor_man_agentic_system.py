@@ -17,6 +17,26 @@ class Message:
 
 
 class BaseAgent:
+    """
+    BaseAgent is a foundational class for creating agents that share a common context and interact with a system prompt.
+    Attributes:
+        name (str | None): The name of the agent. Defaults to None.
+        shared_context (List[Message]): A shared list of messages that represents the agent's context.
+        system_prompt (str | None): The system prompt associated with the agent. Defaults to None.
+    Methods:
+        __init__():
+            Initializes the BaseAgent with default values for name, shared_context, and system_prompt.
+        switch_context(context):
+            Updates the shared context by replacing the existing system prompt (if any) with the current system prompt.
+        async process(task: str | None = None, messages: List[Message] = None):
+            Processes a task by updating the shared context, appending the task as a user message, and calling the LLM for a response.
+        serialized_messages() -> List[dict]:
+            Serializes the shared context messages into a list of dictionaries for further processing.
+    Notes:
+        - The shared_context attribute is critical as it allows agents to maintain a shared state across interactions.
+        - The system_prompt is dynamically updated in the shared context to reflect the agent's current state.
+    """
+
     def __init__(self):
         # Agents share context **THIS IS IMPORTANT**
         self.name: str | None = None
@@ -58,20 +78,55 @@ class BaseAgent:
 
 
 class Agent(BaseAgent):
+    """
+    Represents an agent in a multi-agent system.
+    This class extends the BaseAgent class and is designed to encapsulate 
+    the behavior and attributes of an individual agent. Each agent has a 
+    unique name and an optional system prompt that can be used to define 
+    its behavior or context.
+    Attributes:
+        name (str): The name of the agent, used to uniquely identify it.
+        system_prompt (str | None): An optional system prompt that provides 
+            context or instructions for the agent's behavior.
+    Methods:
+        __init__(name: str, system: str | None = None):
+            Initializes the Agent instance with a name and an optional 
+            system prompt.
+    """
+
     def __init__(self, name: str, system: str | None = None):
         super().__init__()
         self.name = name
         self.system_prompt = system
 
 
+# Create two agents
 book_author = Agent(
     "book_author", system="You are an AI children book author. Given a title create a fun and inspiring short story.")
 book_reviewer = Agent(
     "book_reviewer", system="You are an children author book editor. Given a story, provide feedback and suggestions for improvement including ending with a moral.")
+
+# Create a sequential workflow
 agent_list: List[BaseAgent] = [book_author, book_reviewer]
 
 
 async def runner(task: str):
+    """
+    Executes a sequence of agents in a pipeline, sharing a common message context.
+    This function takes a task description as input and processes it through a list of agents.
+    Each agent modifies the shared message context, which is then passed to the next agent in the sequence.
+    Finally, a "Done" message is appended to the context, and the resulting messages are printed.
+    Args:
+        task (str): The intial task to be processed by the agents.
+    Notes:
+        - The `messages` list is used to share context between agents.
+        - Each agent in `agent_list` is expected to have an asynchronous `process` method that takes
+          the current `messages` as input and returns the updated context.
+        - The function appends a final message indicating completion before printing the context.
+    Example:
+        >>> await runner("Translate this text")
+    """
+
     # Note: sharing messages between agents
     # this is key as the message context is shared between agents
     messages = [Message(agent="user", role="user",
