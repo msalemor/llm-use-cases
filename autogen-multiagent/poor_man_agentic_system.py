@@ -100,47 +100,82 @@ class Agent(BaseAgent):
         self.system_prompt = system
 
 
-# Create two agents
-book_author = Agent(
-    "book_author", system="You are an AI children book author. Given a title create a fun and inspiring short story.")
-book_reviewer = Agent(
-    "book_reviewer", system="You are an children author book editor. Given a story, provide feedback and suggestions for improvement including ending with a moral.")
-
-# Create a sequential workflow
-agent_list: List[BaseAgent] = [book_author, book_reviewer]
-
-
-async def runner(task: str):
+class AgentManager:
     """
-    Executes a sequence of agents in a pipeline, sharing a common message context.
-    This function takes a task description as input and processes it through a list of agents.
-    Each agent modifies the shared message context, which is then passed to the next agent in the sequence.
-    Finally, a "Done" message is appended to the context, and the resulting messages are printed.
-    Args:
-        task (str): The intial task to be processed by the agents.
-    Notes:
-        - The `messages` list is used to share context between agents.
-        - Each agent in `agent_list` is expected to have an asynchronous `process` method that takes
-          the current `messages` as input and returns the updated context.
-        - The function appends a final message indicating completion before printing the context.
-    Example:
-        >>> await runner("Translate this text")
+    Runner AgentManager
+    The `AgentManager` class is responsible for managing and executing a sequence of agents in a pipeline. 
+    It facilitates the registration of agents and orchestrates the processing of tasks through 
+    a shared message context. Each agent in the pipeline modifies the shared context, enabling 
+    collaborative task execution.
+    Attributes:
+        agent_list (List[BaseAgent]): A list of agents registered to the runner. Each agent is 
+        expected to implement an asynchronous `process` method.
+    Methods:
+        register(agent: BaseAgent):
+            Registers an agent to the runner's agent list.
+        process(task: str):
+            Executes the registered agents in sequence, sharing a common message context. 
+            Each agent processes the task and updates the context, which is passed to the next agent.
     """
 
-    # Note: sharing messages between agents
-    # this is key as the message context is shared between agents
-    messages = [Message(agent="user", role="user",
-                        content=task, ts=datetime.now())]
-    for agent in agent_list:
-        # run the agent
-        context = await agent.process(messages=messages)
-        messages = context
-    messages.append(
-        Message(agent="runner", role="runner", content="Done", ts=datetime.now()))
-    print("Final context:")
-    for message in messages:
-        print(f"{message.agent} <-> {message.role}:\n{message.content}")
+    def __init__(self):
+        self.agent_list: List[BaseAgent] = []
 
+    def register(self, agent: BaseAgent):
+        """
+        Registers an agent in the agent list.
+        Args:
+            agent (BaseAgent): The agent to be registered.
+        """
+        self.agent_list.append(agent)
+
+    async def process(self, task: str):
+        """
+        Executes a sequence of agents in a pipeline, sharing a common message context.
+        This function takes a task description as input and processes it through a list of agents.
+        Each agent modifies the shared message context, which is then passed to the next agent in the sequence.
+        Finally, a "Done" message is appended to the context, and the resulting messages are printed.
+        Args:
+            task (str): The intial task to be processed by the agents.
+        Notes:
+            - The `messages` list is used to share context between agents.
+            - Each agent in `agent_list` is expected to have an asynchronous `process` method that takes
+            the current `messages` as input and returns the updated context.
+            - The function appends a final message indicating completion before printing the context.
+        Example:
+            >>> await runner("Translate this text")
+        """
+
+        # Note: sharing messages between agents
+        # this is key as the message context is shared between agents
+        messages = [Message(agent="user", role="user",
+                            content=task, ts=datetime.now())]
+        for agent in self.agent_list:
+            # run the agent
+            context = await agent.process(messages=messages)
+            messages = context
+        messages.append(
+            Message(agent="runner", role="runner", content="Done", ts=datetime.now()))
+        print("Final context:")
+        for message in messages:
+            print(f"{message.agent} <-> {message.role}:\n{message.content}")
+
+
+async def main():
+    runner = AgentManager()
+
+    # Create two agents
+    book_author = Agent(
+        "book_author", system="You are an AI children book author. Given a title create a fun and inspiring short story.")
+    book_reviewer = Agent(
+        "book_reviewer", system="You are an children author book editor. Given a story, provide feedback and suggestions for improvement including ending with a moral.")
+
+    runner.register(book_author)
+    runner.register(book_reviewer)
+
+    await runner.process(
+        "Write a story about a cosmopolitan cat living in NYC.")
 
 if __name__ == "__main__":
-    asyncio.run(runner(task="Write a story about a cat"))
+
+    asyncio.run(main())
