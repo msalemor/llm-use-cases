@@ -50,21 +50,54 @@ system: system information
 """,
 )
 
+example_classifier_agent = AssistantAgent(
+    "classifier_agent",
+    model_client,
+    system_message="""You are a AI that can classify the type of KQL query. Use the provided schema and the following labels to classify the requested query or user ask:
+
+single-table: A query in one cluster for a single table.
+multi-table single-cluster: A query that may span multiple tables but only one cluster and may include joining tables.
+multi-table multi-cluster: A query that may span multiple tables and multiple clusters and may include joining tables.
+Unknown: A query that cannot be classified. Analyze the query and pick the the best label to classify the query.
+
+Output:
+Query classification: <classification>
+""",
+)
+
+expample_generator = AssistantAgent(
+    "expample_generator",
+    model_client,
+    system_message="""You are an AI that can generate a KQL examples based on the classification labels that you are provided.
+
+If the classification is 'single-table', the example is:
+events | where ts>ago(24h)
+
+if the classification is 'multi-table single-cluster', the example is:
+events | join kind=inner (users) on $left.userid == $right.userid | where ts>ago(24h)
+
+if the classification is 'multi-table multi-cluster', the example is:
+cluster('master.contoso.com').database('services').systems | join kind=inner (cluster('loggingevents.contoso.com').database('logs').events) on $left.systemid == $right.systemid | where ts>ago(24h)
+
+Output format:
+Query Sample: <query>
+
+""",
+)
+
 gen_kql_query = AssistantAgent(
     "gen_kql_query",
     model_client,
     system_message="""You are an AI that can generate a KQL queries based on the schema provided. 
 If the cluster and database names are provided, use them in the generated query. 
-Example with cluster and database name: 
-cluster('name.domain.com').database('table').events | where ts>ago(24h)
 
-Once generate write 'TERMINATE'.\n""",
+Once query is generated finish with 'TERMINATE'.\n""",
 )
 
 text_termination = TextMentionTermination("TERMINATE")
 
 team = RoundRobinGroupChat(
-    [get_schema, gen_kql_query],
+    [get_schema, example_classifier_agent, expample_generator, gen_kql_query],
     termination_condition=text_termination
 )
 
@@ -95,11 +128,15 @@ async def process_agent_messages(task: str):
 
 
 async def main():
-    # await Console(team.run_stream(
-    #     task="Find all the infra events in the last 1 hour",))
+    await Console(team.run_stream(
+        task="Find all the infra events in the last 1 hour"))
+    await Console(team.run_stream(
+        task="Find all the infra events in the last 1 hour. Show the user's name"))
+    await Console(team.run_stream(
+        task="Find all the events by user name and system name in the last 24 hours of type change"))
     await process_agent_messages(task="Find all the infra events in the last 1 hour")
-    await process_agent_messages(task="Find all the codes events in the last 1 hour. Show the user name.")
-    await process_agent_messages(task="Write a query to find all events by user name and system name in the last 24 hours")
+    # await process_agent_messages(task="Find all the codes events in the last 1 hour. Show the user name.")
+    # await process_agent_messages(task="Write a query to find all events by user name and system name in the last 24 hours")
 
 if __name__ == "__main__":
     asyncio.run(main())
