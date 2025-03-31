@@ -1,7 +1,7 @@
 import asyncio
 from dataclasses import dataclass
 from datetime import datetime
-from typing import List, Protocol
+from typing import List
 from dataclasses_json import dataclass_json
 
 from common import completion
@@ -129,7 +129,7 @@ class AgentManager:
         """
         self.agent_list.append(agent)
 
-    async def process(self, task: str):
+    async def process(self, task: str) -> List[Message]:
         """
         Executes a sequence of agents in a pipeline, sharing a common message context.
         This function takes a task description as input and processes it through a list of agents.
@@ -148,17 +148,18 @@ class AgentManager:
 
         # Note: sharing messages between agents
         # this is key as the message context is shared between agents
-        messages = [Message(agent="user", role="user",
-                            content=task, ts=datetime.now())]
+        shared_message_context = [Message(agent="user", role="user",
+                                          content=task, ts=datetime.now())]
         for agent in self.agent_list:
             # run the agent
-            context = await agent.process(messages=messages)
-            messages = context
-        messages.append(
+            context = await agent.process(messages=shared_message_context)
+            shared_message_context = context
+        shared_message_context.append(
             Message(agent="runner", role="runner", content="Done", ts=datetime.now()))
         print("Final context:")
-        for message in messages:
+        for message in shared_message_context:
             print(f"{message.agent} <-> {message.role}:\n{message.content}")
+        return shared_message_context
 
 
 async def main():
@@ -173,7 +174,7 @@ async def main():
     runner.register(book_author)
     runner.register(book_reviewer)
 
-    await runner.process(
+    agent_conversation_history = await runner.process(
         "Write a story about a cosmopolitan cat living in NYC.")
 
 if __name__ == "__main__":
