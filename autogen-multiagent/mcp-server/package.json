@@ -1,0 +1,19 @@
+{
+  "name": "mcp-server",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0"
+  },
+  "scripts": {
+    "build": "bun build index.ts --outdir dist --target node && chmod +x dist/index.js",
+    "start": "bun run index.ts"
+  }
+}
