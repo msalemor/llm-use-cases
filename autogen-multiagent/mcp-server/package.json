@@ -10,8 +10,16 @@
     "typescript": "^5"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@modelcontextprotocol/sdk": "^1.9.0",
     "@types/express": "^5.0.1",
     "express": "^5.1.0"
+=======
+    "@modelcontextprotocol/sdk": "^1.9.0"
+  },
+  "scripts": {
+    "build": "bun build index.ts --outdir dist --target node && chmod +x dist/index.js",
+    "start": "bun run index.ts"
+>>>>>>> refs/remotes/origin/main
   }
 }

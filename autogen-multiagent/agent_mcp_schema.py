@@ -10,9 +10,8 @@ from common import get_model_client
 
 async def main() -> None:
     # Setup server params for local filesystem access
-    approved_folder = "/home/alex/github/msalemor/llm-use-cases/autogen-multiagent"
     server_params = StdioServerParams(
-        command="npx", args=["-y", "@modelcontextprotocol/server-filesystem", approved_folder]
+        command="/home/alex/.bun/bin/bun", args=["/home/alex/github/msalemor/llm-use-cases/autogen-multiagent/mcp-server/index.ts"]
     )
 
     # Get all available tools from the server
@@ -26,7 +25,7 @@ async def main() -> None:
     )
 
     # The agent can now use any of the filesystem tools
-    await agent.run(task="Create a file called test.txt with some content", cancellation_token=CancellationToken())
+    await agent.run(task="What is the schema for table events", cancellation_token=CancellationToken())
 
 
 if __name__ == "__main__":

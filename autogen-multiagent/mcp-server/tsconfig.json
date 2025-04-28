@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     // Environment setup & latest features
+<<<<<<< HEAD
     "lib": ["esnext"],
+=======
+    "lib": ["ESNext"],
+>>>>>>> refs/remotes/origin/main
     "target": "ESNext",
     "module": "ESNext",
     "moduleDetection": "force",
