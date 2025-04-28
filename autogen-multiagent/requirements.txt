@@ -1,5 +1,6 @@
 python-dotenv
 autogen-agentchat
-autogen-ext[openai,docker,grpc]
+autogen-ext[openai,docker,grpc,mcp]
 rich
 dataclasses-json
+click

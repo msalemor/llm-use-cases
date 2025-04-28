@@ -1,0 +1,17 @@
+{
+  "name": "mcp-server",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "@types/express": "^5.0.1",
+    "express": "^5.1.0"
+  }
+}
