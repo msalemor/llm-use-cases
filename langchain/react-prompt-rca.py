@@ -1,6 +1,8 @@
+from collections.abc import Callable
 import os
 import json
 from datetime import datetime, timedelta
+from typing import Any, Optional
 
 import click
 from dotenv import load_dotenv
@@ -8,6 +10,7 @@ from langchain_openai import AzureChatOpenAI
 from langchain.agents import AgentExecutor, create_react_agent
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.tools import StructuredTool
+from langchain.callbacks.base import BaseCallbackHandler
 from langchain import hub
 
 load_dotenv()
@@ -17,6 +20,36 @@ llm = AzureChatOpenAI(
     azure_endpoint=os.getenv("OPENAI_ENDPOINT"),
     azure_deployment=os.getenv("OPENAI_GPT_DEPLOYMENT", "gpt-4o"),
 )
+
+
+def print_delegate(message: str) -> None:
+    """A simple delegate function that prints a message."""
+    print(message)
+
+
+class ProgressCallbackHandler(BaseCallbackHandler):
+    def __init__(
+        self, progress_callback: Optional[Callable[[str], None]] = print_delegate
+    ):
+        self.progress_callback = progress_callback
+
+    def on_agent_action(self, action: Any, **kwargs: Any) -> Any:
+        if self.progress_callback:
+            tool_name = action.tool
+            tool_input = action.tool_input
+            # print(f"⚙️ Executing {tool_name} with input: {tool_input}")
+            # Uncomment the next line if you want to use the tool name from action.tool
+            # tool_name = action.tool.name if action.tool else "Unknown Tool"
+            self.progress_callback(f"⚙️ Executing {tool_name} with input: {tool_input}")
+
+    def on_tool_end(self, output: str, **kwargs: Any) -> Any:
+        if self.progress_callback:
+            self.progress_callback("   ✓ Operation completed")
+
+    def on_tool_error(self, error: BaseException, **kwargs: Any) -> Any:
+        if self.progress_callback:
+            self.progress_callback(f"❌ Error: {str(error)}")
+
 
 # Sample ticket data (simulating a ticket system)
 TICKET_DATA = {
@@ -340,9 +373,12 @@ async def main():
     agent_executor = AgentExecutor(
         agent=agent,
         tools=tools,
-        verbose=True,
+        verbose=False,
         max_iterations=10,
         handle_parsing_errors=True,
+        callbacks=[
+            ProgressCallbackHandler()
+        ],  # Customer callback handler to track progress
     )
 
     # Example RCA investigation
