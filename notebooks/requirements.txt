@@ -1,3 +1,4 @@
+click
 openai
 python-dotenv
 tiktoken
@@ -9,5 +10,7 @@ yfinance
 pillow
 pyautogen
 pymilvus
+langchain
+langchain-core
 langchain-milvus 
 langchain-openai
