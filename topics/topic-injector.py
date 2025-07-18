@@ -102,28 +102,25 @@ async def completion(
     return completion.choices[0].message.content
 
 
+async def process(chat_history: list[dict[str, str]], prompt: str) -> None:
+    chat_history.append({"role": "user", "content": prompt})
+    print("Question: " + chat_history[-1]["content"])
+    response = await completion(chat_history)
+    chat_history.append({"role": "assistant", "content": response})
+    print(f"Answer: {chat_history[-1]['content']}\n")
+
+
 async def main():
     chat_history = []
-    messages = [{"role": "user", "content": "What is the capital of France?"}]
-    chat_history.append(chat_history)
 
-    answer = await completion(messages)
-    chat_history.append({"role": "assistant", "content": answer})
-    print(answer)
+    # No match
+    await process(chat_history, "What is the capital of France?")
 
-    message = [{"role": "user", "content": "What is the current date and time?"}]
-    chat_history.append(message[0])
+    # Exact match
+    await process(chat_history, "What is the current date and time?")
 
-    # Exact phrase match
-    answer = await completion(chat_history)
-    chat_history.append({"role": "assistant", "content": answer})
-    print(answer)
-
-    # Not an exact phrase
-    chat_history.append({"role": "user", "content": "What is my local time?"})
-    answer = await completion(chat_history)
-    chat_history.append({"role": "assistant", "content": answer})
-    print(answer)
+    # Semantic match
+    await process(chat_history, "What is my local time?")
 
 
 if __name__ == "__main__":
