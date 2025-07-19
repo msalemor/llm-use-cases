@@ -8,7 +8,7 @@ Jinja2
 langchain
 yfinance
 pillow
-pyautogen
+ag2
 pymilvus
 langchain
 langchain-core
