@@ -56,15 +56,15 @@ async def non_optimized_run():
     ]
 
     
-    messages = [] # conversation thread
+    conversation_history = [] # conversation thread
     usage = None
 
     for prompt in prompts:
-        messages.append({"role": "user", "content": prompt})
+        conversation_history.append({"role": "user", "content": prompt})
         print("User:", prompt)
-        response, usage = await completion(messages)
+        response, usage = await completion(conversation_history)
         print("Assistant:", response)
-        messages.append({"role": "assistant", "content": response})            
+        conversation_history.append({"role": "assistant", "content": response})            
         print(f"Token Usage: Sent: {usage.prompt_tokens}, Received: {usage.completion_tokens}, Total: {usage.total_tokens}")
 
     print(f"Final Token Usage: Sent: {usage.prompt_tokens}, Received: {usage.completion_tokens}, Total: {usage.total_tokens}\n")
@@ -83,15 +83,15 @@ async def optimized_run():
         "Convert the Golang application to TypeScript with Bun.js. Output the code only in the following JSON format: {\"code\": \"<your_code_here>\"}. No epilogue or prologue."
     ]
 
-    messages = []
+    conversation_history = []
     usage = None
 
     for prompt in prompts:
-        messages.append({"role": "user", "content": prompt})
+        conversation_history.append({"role": "user", "content": prompt})
         print("User:", prompt)
-        response, usage = await completion(messages, response_format="json_object")
+        response, usage = await completion(conversation_history, response_format="json_object")
         #print("Assistant:", response)
-        messages.append({"role": "assistant", "content": response})            
+        conversation_history.append({"role": "assistant", "content": response})            
         print(f"Token Usage: Sent: {usage.prompt_tokens}, Received: {usage.completion_tokens}, Total: {usage.total_tokens}")
     
     print(f"Final Token Usage: Sent: {usage.prompt_tokens}, Received: {usage.completion_tokens}, Total: {usage.total_tokens}\n")
@@ -110,15 +110,15 @@ async def super_optimized_run():
         "Convert the Golang application to TypeScript with Bun.js. Output the code only. No epilogue or prologue."
     ]
 
-    messages = []
+    conversation_history = []
     usage = None
     last_response = ""
 
     for prompt in prompts:
-        messages = []
-        messages.append({"role": "user", "content": prompt + last_response})
+        conversation_history = []
+        conversation_history.append({"role": "user", "content": prompt + last_response})
         print("User:", prompt)
-        response, usage = await completion(messages)
+        response, usage = await completion(conversation_history)
         last_response = "\n\n" + response
         print(f"Token Usage: Sent: {usage.prompt_tokens}, Received: {usage.completion_tokens}, Total: {usage.total_tokens}")
 
