@@ -66,7 +66,7 @@ No epilogue or prologue. Respond in the following JSON format only:
 ";
 
   var criteriaList = string.Join("\n", request.CriteriaItems.Select(ci => $"- {ci.Criteria} ({ci.Weight}): {ci.Description}"));
-  var criteriaObjects = string.Join(",\n        ", request.CriteriaItems.Select(ci => $@"{{
+  var criteriaJSONObjects = string.Join(",\n        ", request.CriteriaItems.Select(ci => $@"{{
             ""criteria"": ""{ci.Criteria}"",
             ""weight"": {ci.Weight},
             ""score"": number (0-5),
@@ -78,7 +78,7 @@ No epilogue or prologue. Respond in the following JSON format only:
 
   var prompt = promptTemplate.Replace("<CRITERIA_LIST>", criteriaList)
                              .Replace("<CONTEXT>", request.Context)
-                             .Replace("<CRITERIA_OBJECTS>", criteriaObjects);
+                             .Replace("<CRITERIA_OBJECTS>", criteriaJSONObjects);
 
   Console.WriteLine($"Generated Prompt:\n{prompt}");
   File.WriteAllText("prompt.txt", prompt);
