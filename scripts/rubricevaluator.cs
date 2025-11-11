@@ -35,9 +35,9 @@ Console.WriteLine(JsonSerializer.Serialize(response.Result, jsonSerializerOption
 
 
 /// <summary>
-/// Evaluates the given text against specified criteria using a prompt template.    
+/// Evaluates a give text against specified criteria.
 /// </summary>
-/// <param name="request">The request containing the context and criteria items.</param>
+/// <param name="request">The request containing the text and criteria items.</param>
 /// <returns>A task that represents the asynchronous operation. The task result contains the evaluation response.</returns>
 async Task<Response> EvaluateRubricAsync(Request request)
 {
@@ -85,7 +85,7 @@ No epilogue or prologue. Respond in the following JSON format only:
   await Task.Delay(100); // Simulate async work
 
 
-  // TODO: Replace this mock response with actual call to the LLM
+  // TODO: Replace this mock response with actual call to an LLM
   const string mockResponse = @"
 {
   ""context"": ""Evaluation of a technical document for clarity and relevance."",
