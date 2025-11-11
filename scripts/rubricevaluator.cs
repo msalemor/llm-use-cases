@@ -85,7 +85,7 @@ No epilogue or prologue. Respond in the following JSON format only:
   await Task.Delay(100); // Simulate async work
 
 
-  // TODO: Replace this mock response with actual call to LLM
+  // TODO: Replace this mock response with actual call to the LLM
   const string mockResponse = @"
 {
   ""context"": ""Evaluation of a technical document for clarity and relevance."",
