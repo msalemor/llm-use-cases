@@ -1,5 +1,5 @@
-// See https://aka.ms/new-console-template for more information
 using System.Text.Json;
+using System.Text.Json.Serialization;
 //using ToonFormat;
 
 // Request request = new(
@@ -65,10 +65,10 @@ No epilogue or prologue. Respond in the following JSON format only:
 }
 ";
 
-  var criteriaList = string.Join("\n", request.CriteriaItems.Select(ci => $"- {ci.Criteria} ({ci.weight}): {ci.Description}"));
+  var criteriaList = string.Join("\n", request.CriteriaItems.Select(ci => $"- {ci.Criteria} ({ci.Weight}): {ci.Description}"));
   var criteriaObjects = string.Join(",\n        ", request.CriteriaItems.Select(ci => $@"{{
             ""criteria"": ""{ci.Criteria}"",
-            ""weight"": {ci.weight},
+            ""weight"": {ci.Weight},
             ""score"": number (0-5),
             ""weightedScore"": number (0.0-5.0),
             ""scoreRationale"": string
@@ -133,19 +133,23 @@ No epilogue or prologue. Respond in the following JSON format only:
 /// <summary>
 /// Lists the properties of an object and their values.
 /// </summary>
-/// <param name="Criteria"></param>
-/// <param name="Description"></param>
-record CriteriaItem(string Criteria, string Description, double weight = 0.0);
+record CriteriaItem(
+  [property: JsonPropertyName("criteria")] string Criteria,
+  [property: JsonPropertyName("description")] string Description,
+  [property: JsonPropertyName("weight")] double Weight = 0.0
+);
 
 /// <summary>
 /// Request to evaluate text against criteria.
 /// </summary>
-/// <param name="Context">The text to evaluate</param>
-/// <param name="CriteriaItems">The criteria items to evaluate against</param>
-record Request(string Context, IEnumerable<CriteriaItem> CriteriaItems);
+record Request(
+  [property: JsonPropertyName("context")] string Context,
+  [property: JsonPropertyName("criteriaItems")] IEnumerable<CriteriaItem> CriteriaItems
+);
 
 /// <summary>
 /// Response from the evaluation.
 /// </summary>
-/// <param name="Result">The dynamic result of the evaluation.</param>
-record Response(dynamic? Result);
+record Response(
+  [property: JsonPropertyName("result")] dynamic? Result
+);
